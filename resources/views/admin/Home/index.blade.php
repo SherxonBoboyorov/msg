@@ -19,7 +19,7 @@
                     </div>
                 </li>
             </ul>
-            <div class="clearfix" style="background-color: #007bff; height: 57.5px;"></div>
+            <div class="clearfix" style="background-color: #182B45; height: 57.5px;"></div>
         </nav>
     </div>
 

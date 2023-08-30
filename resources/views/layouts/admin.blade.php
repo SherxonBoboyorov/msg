@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>@yield('title')</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -26,7 +27,7 @@
         <a href="{{ route('homeAdmin') }}" class="brand-link">
             <style>
                 .brand-link {
-                    background-color: #007bff;
+                    background-color: #182B45;
                 }
             </style>
             <span class="brand-text font-weight-light" style="margin-left: 70px">MSG</span>
@@ -35,9 +36,16 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                //
-
-
+                 {{-- start  --}}
+                 <li class="nav-item">
+                    <a href="{{ route('slider.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-sliders-h"></i>
+                    <p>
+                        Sliders
+                    </p>
+                    </a>
+                  </li>
+                {{-- end  --}}
 
                 </ul>
             </nav>
