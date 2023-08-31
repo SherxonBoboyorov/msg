@@ -11,9 +11,9 @@ class UpdatePage extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,15 @@ class UpdatePage extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'sub_content_de' => 'required|',
+            'sub_content_en' => 'required|',
+            'sub_content_ru' => 'required|',
+            'content_de' => 'required|',
+            'content_en' => 'required|',
+            'content_ru' => 'required|',
         ];
     }
 }

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CreatePage;
+use App\Http\Requests\Admin\UpdatePage;
+use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PageController extends Controller
 {
@@ -14,7 +18,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $pages = Page::all();
+        return view('admin.page.index', compact('pages'));
     }
 
     /**
@@ -24,18 +29,26 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.page.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\CreatePage  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePage $request)
     {
-        //
+        $data = $request->all();
+
+        $data['icon'] = Page::uploadIcon($request);
+        $data['image'] = Page::uploadImage($request);
+
+        if (Page::create($data)) {
+            return redirect()->route('page.index')->with('message', 'added successfully!!!');
+        }
+        return redirect()->route('page.index')->with('message', 'failed to add successfully');
     }
 
     /**
@@ -57,19 +70,30 @@ class PageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page = Page::find($id);
+        return view('admin.page.edit', compact('page'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\UpdatePage  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePage $request, $id)
     {
-        //
+        $page = Page::find($id);
+
+        $data = $request->all();
+        $data['icon'] = Page::updateIcon($request, $page);
+        $data['image'] = Page::updateImage($request, $page);
+
+        if ($page->update($data)) {
+            return redirect()->route('page.index')->with('message', 'updated successfully!!!');
+        }
+
+        return redirect()->route('page.index')->with('message', 'failed to update successfully');
     }
 
     /**
@@ -80,6 +104,16 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $page = Page::find($id);
+
+        if (File::exists(public_path() . $page->page)) {
+            File::delete(public_path() . $page->page);
+        }
+
+        if ($page->delete()) {
+            return redirect()->route('page.index')->with('message', "deleted successfully!!!");
+        }
+
+        return redirect()->route('page.index')->with('message', "failed to delete successfully");
     }
 }

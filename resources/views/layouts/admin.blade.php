@@ -32,7 +32,7 @@
             </style>
             <span class="brand-text font-weight-light" style="margin-left: 70px">MSG</span>
         </a>
-        <div class="sidebar">
+        <div class="sidebar" style="background-color: #182B45">
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
@@ -46,6 +46,19 @@
                     </a>
                   </li>
                 {{-- end  --}}
+
+
+                {{-- start  --}}
+                <li class="nav-item">
+                    <a href="{{ route('page.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-building"></i>
+                    <p>
+                        About Company
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>
