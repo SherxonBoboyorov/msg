@@ -8,20 +8,21 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">Add Slider</h4>
+                        <h4 class="page-title">Edit Slider</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
 
-            <form action="{{ route('slider.store') }}" enctype="multipart/form-data" method="POST">
+            <form action="{{ route('slider.update', $slider->id) }}" enctype="multipart/form-data" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="title_de">Title [Deutsch]</label>
-                                <input type="text" id="title_de" class="form-control" name="title_de">
+                                <input type="text" id="title_de" value="{{ $slider->title_de }}" class="form-control" name="title_de">
                                 @if($errors->has('title_de'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -34,7 +35,7 @@
 
                             <div class="col-md-4">
                                 <label for="title_en">Title [English]</label>
-                                <input type="text" id="title_en" class="form-control" name="title_en">
+                                <input type="text" id="title_en" value="{{ $slider->title_en }}" class="form-control" name="title_en">
                                 @if($errors->has('title_en'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -48,7 +49,7 @@
 
                             <div class="col-md-4">
                                 <label for="title_ru">Title [Russian]</label>
-                                <input type="text" id="title_ru" class="form-control" name="title_ru">
+                                <input type="text" id="title_ru" value="{{ $slider->title_ru }}" class="form-control" name="title_ru">
                                 @if($errors->has('title_ru'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -65,7 +66,7 @@
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-12">
                                 <label for="content_de">Content [Deutsch]</label>
-                                <input type="text" id="content_de" class="form-control" name="content_de">
+                                <input type="text" id="content_de" value="{{ $slider->content_de }}" class="form-control" name="content_de">
                                 @if($errors->has('content_de'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -81,7 +82,7 @@
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-12">
                                 <label for="content_en">Content [English]</label>
-                                <input type="text" id="content_en" class="form-control" name="content_en">
+                                <input type="text" id="content_en" value="{{ $slider->content_en }}" class="form-control" name="content_en">
                                 @if($errors->has('content_en'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -96,7 +97,7 @@
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-12">
                                 <label for="content_ru">Content [Russian]</label>
-                                <input type="text" id="content_ru" class="form-control" name="content_ru">
+                                <input type="text" id="content_ru" value="{{ $slider->content_ru }}" class="form-control" name="content_ru">
                                 @if($errors->has('content_ru'))
                                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -121,6 +122,9 @@
                                         {{ $errors->first('image') }}
                                     </div>
                                 @endif
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{{ asset($slider->image) }}" width="150" height="150" alt="">
                             </div>
                         </div>
                         <br>

@@ -9,10 +9,6 @@ use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
 
-
-
-
-
 Auth::routes();
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
@@ -20,7 +16,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['role:admin'])->prefix('dashboard')->group(static function () {
     Route::get('/', [HomeController::class, 'index'])->name('homeAdmin');
     Route::resources([
-        'slider' => SliderController::class
+        'slider' => SliderController::class,
     ]);
 });
 

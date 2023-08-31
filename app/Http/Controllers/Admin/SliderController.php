@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\CreateSlider;
+use App\Http\Requests\Admin\UpdateSlider;
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class SliderController extends Controller
 {
@@ -32,10 +35,10 @@ class SliderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\CreateSlider  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateSlider $request)
     {
         $data = $request->all();
 
@@ -73,13 +76,23 @@ class SliderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\Admin\UpdateSlider  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateSlider $request, $id)
     {
-        //
+        $slider = Slider::find($id);
+
+        $data = $request->all();
+        
+        $data['image'] = Slider::updateImage($request, $slider);
+
+        if ($slider->update($data)) {
+            return redirect()->route('slider.index')->with('message', 'changed successfully!!!');
+        }
+
+        return redirect()->route('slider.index')->with('message', 'changed no successfully!!!');
     }
 
     /**
@@ -90,6 +103,20 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (!Slider::find($id)) {
+            return redirect()->route('slider.index')->with('message', "Slider not found");
+        }
+
+        $slider = Slider::find($id);
+
+        if (File::exists(public_path() . $slider->image)) {
+            File::delete(public_path() . $slider->image);
+        }
+
+        if ($slider->delete()) {
+            return redirect()->route('slider.index')->with('message', "Slider deleted successfully");
+        }
+
+        return redirect()->route('slider.index')->with('message', "Unable to delete slider");
     }
 }
