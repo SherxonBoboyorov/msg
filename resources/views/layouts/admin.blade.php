@@ -116,6 +116,17 @@
                  </li>
                 {{-- end  --}}
 
+                {{-- start  --}}
+                <li class="nav-item">
+                    <a href="{{ route('partner.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-handshake"></i>
+                    <p>
+                        Partners 
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>

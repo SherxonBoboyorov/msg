@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\NurseController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
@@ -28,7 +29,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'diagnostic' => DiagnosticController::class,
         'patient' => PatientController::class,
         'doctor' => DoctorController::class,
-        'nurse' => NurseController::class
+        'nurse' => NurseController::class,
+        'partner' => PartnerController::class
     ]);
 });
 

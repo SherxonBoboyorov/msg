@@ -106,9 +106,9 @@
                                     </div>
                                 @endif
                             </div>
-                        </div>
+                        </div><br>
 
-
+                    
                         <div class="row" style="margin-top: 15px">
                             <div class="col-md-6">
                                 <label for="image">Image</label>
