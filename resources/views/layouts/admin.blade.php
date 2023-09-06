@@ -105,6 +105,17 @@
                  </li>
                 {{-- end  --}}
 
+                   {{-- start  --}}
+                   <li class="nav-item">
+                    <a href="{{ route('nurse.index') }}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-user-nurse"></i>
+                    <p>
+                        Nurses 
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>

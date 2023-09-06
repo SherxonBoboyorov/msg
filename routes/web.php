@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\NurseController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
@@ -26,7 +27,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'disease' => DiseaseController::class,
         'diagnostic' => DiagnosticController::class,
         'patient' => PatientController::class,
-        'doctor' => DoctorController::class
+        'doctor' => DoctorController::class,
+        'nurse' => NurseController::class
     ]);
 });
 

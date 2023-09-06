@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 
 @section('content')
 
@@ -162,4 +162,4 @@
 @endsection
 @section('custom_js')
 @component('admin.utils.tinymce')@endcomponent
-@endsection
+@endsection --}}

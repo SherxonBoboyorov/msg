@@ -16,7 +16,7 @@
         </div>
 
         <!-- end page title end breadcrumb -->
-        <form action="{{ route('patient.store') }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('nurse.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="card">
                 <div class="card-body">
