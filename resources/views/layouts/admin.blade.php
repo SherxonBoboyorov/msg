@@ -127,6 +127,17 @@
                  </li>
                 {{-- end  --}}
 
+                 {{-- start  --}}
+                 <li class="nav-item">
+                    <a href="{{ route('goal.index') }}" class="nav-link">
+                        <i class="nav-icon fa-solid fa-bullseye"></i>
+                    <p>
+                        Goals / Content
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>

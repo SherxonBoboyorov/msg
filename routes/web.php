@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
 use App\Http\Controllers\Admin\DoctorController;
+use App\Http\Controllers\Admin\GoalController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -30,7 +31,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'patient' => PatientController::class,
         'doctor' => DoctorController::class,
         'nurse' => NurseController::class,
-        'partner' => PartnerController::class
+        'partner' => PartnerController::class,
+        'goal' => GoalController::class
     ]);
 });
 
