@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title">All Diseases content</h4>
+                        <h4 class="page-title">All Information for patients</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -41,19 +41,19 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($diseases as $disease)
+                        @foreach ($patients as $patient)
                             <tr>
-                                <td>{{ $disease->id }}</td>
-                                <td class="table_cart_list">{!! $disease->content_de !!}</td>
-                                <td class="table_cart_list">{!! $disease->content_en !!}</td>
-                                <td class="table_cart_list">{!! $disease->content_ru !!}</td>
+                                <td>{{ $patient->id }}</td>
+                                <td class="table_cart_list">{!! $patient->content_de !!}</td>
+                                <td class="table_cart_list">{!! $patient->content_en !!}</td>
+                                <td class="table_cart_list">{!! $patient->content_ru !!}</td>
                                 <td>
-                                    <a href="{{ route('disease.edit', $disease->id) }}" class="btn btn-primary btn-icon">
+                                    <a href="{{ route('patient.edit', $patient->id) }}" class="btn btn-primary btn-icon">
                                         <i class="fa fa-edit"> Edit</i>
                                     </a>
                                 </td>
                                 {{-- <td>
-                                    <form action="{{ route('disease.destroy', $disease->id) }}" method="POST">
+                                    <form action="{{ route('patient.destroy', $patient->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-icon">

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -22,7 +23,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'slider' => SliderController::class,
         'page' => PageController::class,
         'disease' => DiseaseController::class,
-        'diagnostic' => DiagnosticController::class
+        'diagnostic' => DiagnosticController::class,
+        'patient' => PatientController::class
     ]);
 });
 

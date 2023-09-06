@@ -81,6 +81,16 @@
                  </li>
                 {{-- end  --}}
 
+                 {{-- start  --}}
+                 <li class="nav-item">
+                    <a href="{{ route('patient.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-briefcase-medical"></i>
+                    <p>
+                        Patient / Content 
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
 
 
                 </ul>
