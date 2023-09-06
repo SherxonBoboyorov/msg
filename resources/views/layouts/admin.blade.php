@@ -62,13 +62,25 @@
                   {{-- start  --}}
                   <li class="nav-item">
                     <a href="{{ route('disease.index') }}" class="nav-link">
-                    <i class="nav-icon fa-solid fa-disease"></i>
+                    <i class="nav-icon fa-sharp fa-solid fa-disease fa-beat"></i>
                     <p>
                         Diseases / Content
                     </p>
                     </a>
                  </li>
                 {{-- end  --}}
+
+                 {{-- start  --}}
+                 <li class="nav-item">
+                    <a href="{{ route('diagnostic.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-diagnoses"></i>
+                    <p>
+                        Diagnostics 
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
 
                 </ul>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
     Route::resources([
         'slider' => SliderController::class,
         'page' => PageController::class,
-        'disease' => DiseaseController::class
+        'disease' => DiseaseController::class,
+        'diagnostic' => DiagnosticController::class
     ]);
 });
 
