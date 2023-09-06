@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DiseaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -18,7 +19,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
     Route::get('/', [HomeController::class, 'index'])->name('homeAdmin');
     Route::resources([
         'slider' => SliderController::class,
-        'page' => PageController::class
+        'page' => PageController::class,
+        'disease' => DiseaseController::class
     ]);
 });
 

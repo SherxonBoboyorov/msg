@@ -59,6 +59,17 @@
                  </li>
                 {{-- end  --}}
 
+                  {{-- start  --}}
+                  <li class="nav-item">
+                    <a href="{{ route('disease.index') }}" class="nav-link">
+                    <i class="nav-icon fa-solid fa-disease"></i>
+                    <p>
+                        Diseases / Content
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>
