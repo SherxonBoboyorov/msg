@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
+use App\Http\Controllers\Admin\DoctorController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -24,7 +25,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'page' => PageController::class,
         'disease' => DiseaseController::class,
         'diagnostic' => DiagnosticController::class,
-        'patient' => PatientController::class
+        'patient' => PatientController::class,
+        'doctor' => DoctorController::class
     ]);
 });
 
