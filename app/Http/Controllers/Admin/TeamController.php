@@ -40,7 +40,14 @@ class TeamController extends Controller
      */
     public function store(CreateTeam $request)
     {
-        //
+        $data = $request->all();
+
+        $data['image'] = Team::uploadImage($request);
+
+        if (Team::create($data)) {
+            return redirect()->route('team.index')->with('message', 'added successfully!!!');
+        }
+        return redirect()->route('team.index')->with('message', 'failed to add successfully');
     }
 
     /**
@@ -75,7 +82,16 @@ class TeamController extends Controller
      */
     public function update(UpdateTeam $request, $id)
     {
-        //
+        $team = Team::find($id);
+
+        $data = $request->all();
+        $data['image'] = Team::updateImage($request, $team);
+
+        if ($team->update($data)) {
+            return redirect()->route('team.index')->with('message', 'updated successfully!!!');
+        }
+
+        return redirect()->route('team.index')->with('message', 'failed to update successfully');
     }
 
     /**
@@ -86,6 +102,16 @@ class TeamController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $team = Team::find($id);
+
+        if (File::exists(public_path() . $team->image)) {
+            File::delete(public_path() . $team->image);
+        }
+
+        if ($team->delete()) {
+            return redirect()->route('team.index')->with('message', "deleted successfully!!!");
+        }
+
+        return redirect()->route('team.index')->with('message', "failed to delete successfully");
     }
 }

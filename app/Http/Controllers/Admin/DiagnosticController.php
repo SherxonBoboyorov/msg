@@ -103,7 +103,7 @@ class DiagnosticController extends Controller
      */
     public function destroy($id)
     {
-        $diagnostic = diagnostic::find($id);
+        $diagnostic = Diagnostic::find($id);
 
         if (File::exists(public_path() . $diagnostic->image)) {
             File::delete(public_path() . $diagnostic->image);

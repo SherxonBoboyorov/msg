@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TeamController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -32,7 +33,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'doctor' => DoctorController::class,
         'nurse' => NurseController::class,
         'partner' => PartnerController::class,
-        'goal' => GoalController::class
+        'goal' => GoalController::class,
+        'team' => TeamController::class
     ]);
 });
 

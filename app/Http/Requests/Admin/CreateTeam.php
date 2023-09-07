@@ -25,7 +25,14 @@ class CreateTeam extends FormRequest
     {
         return [
             'image' => 'required|image|mimes:png,jpg,jpeg,wepb',
-         
+            'name_de' => 'required|string|max:255',
+            'name_en' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'content_de' => 'required|',
+            'content_en' => 'required|',
+            'content_ru' => 'required|',
+            'phone' => 'required|string|max:55',
+            'email' => 'required|string|max:255'
         ];
     }
 }
