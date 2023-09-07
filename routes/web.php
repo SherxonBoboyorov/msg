@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
@@ -38,7 +39,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'goal' => GoalController::class,
         'team' => TeamController::class,
         'faq' => FaqController::class,
-        'content' => ContentController::class
+        'content' => ContentController::class,
+        'category' => CategoryController::class
     ]);
 });
 

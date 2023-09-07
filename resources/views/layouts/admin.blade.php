@@ -173,6 +173,17 @@
                  </li>
                 {{-- end  --}}
 
+                {{-- start  --}}
+                <li class="nav-item">
+                    <a href="{{ route('category.index') }}" class="nav-link">
+                        <i class="nav-icon fa-solid fas fa-usb"></i>
+                     <p>
+                        Document / Category
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>
