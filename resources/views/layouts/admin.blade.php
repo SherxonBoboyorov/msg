@@ -150,6 +150,17 @@
                  </li>
                 {{-- end  --}}
 
+                  {{-- start  --}}
+                  <li class="nav-item">
+                    <a href="{{ route('faq.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-question-circle"></i>
+                     <p>
+                        Faqs
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 </ul>
             </nav>

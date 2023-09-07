@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('faqs', function (Blueprint $table) {
             $table->id();
+
+            $table->string('title_de');
+            $table->string('title_en');
+            $table->string('title_ru');
+
+            $table->text('content_de');
+            $table->text('content_en');
+            $table->text('content_ru');
+            
             $table->timestamps();
         });
     }
