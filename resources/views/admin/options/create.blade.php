@@ -25,21 +25,21 @@
                             <div class="col-md-8">
                               <label for="key">Key</label>
                               <select name="key" id="key" class="form-control">
-                                  <option value="address_uz">Address Uz</option>
+                                  <option value="map">Google or Yandex MAP</option>
+                                  <option value="address_de">Address DE</option>
+                                  <option value="address_en">Address EN</option>
                                   <option value="address_ru">Address Ru</option>
-                                  <option value="address_en">Address En</option>
                                   <option value="phone">Phone</option>
                                   <option value="email">E-mail</option>
-                                  <option value="map">Google or Yandex MAP</option>
-                                  <option value="instagram">Instagram</option>
-                                  <option value="facebook">Facebook</option>
+                                  <option value="footer">Footer E-mail</option>
+                                  <option value="whatsapp">Instagram</option>
                                   <option value="telegram">Telegram</option>
-                                  <option value="meta_title_ru">Meta title RU</option>
-                                  <option value="meta_title_uz">Meta title UZ</option>
-                                  <option value="meta_title_en">Meta title EN</option>
-                                  <option value="meta_description_ru">Meta description Ru</option>
-                                  <option value="meta_description_uz">Meta description UZ</option>
+                                  <option value="meta_title_de">Meta title De</option>
+                                  <option value="meta_title_en">Meta title En</option>
+                                  <option value="meta_title_ri">Meta title RU</option>
+                                  <option value="meta_description_de">Meta description DE</option>
                                   <option value="meta_description_en">Meta description EN</option>
+                                  <option value="meta_description_ru">Meta description RU</option>
                               </select>
                               @if($errors->has('key'))
                                   <div class="alert alert-success alert-dismissible fade show" role="alert">

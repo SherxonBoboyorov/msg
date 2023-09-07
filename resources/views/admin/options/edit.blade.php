@@ -26,14 +26,14 @@
                             <div class="col-md-8">
                                 <label for="key">Key</label>
                                 <select name="key" id="key" class="form-control">
-                                    <option value="address_uz" @if($option->key == 'address_uz') selected @endif>Address UZ</option>
-                                    <option value="address_ru" @if($option->key == 'address_ru') selected @endif>Address RU</option>
+                                    <option value="map" @if($option->key == 'map') selected @endif>Google or Yandex MAP</option>
+                                    <option value="address_de" @if($option->key == 'address_de') selected @endif>Address DE</option>
                                     <option value="address_en" @if($option->key == 'address_en') selected @endif>Address EN</option>
+                                    <option value="address_ru" @if($option->key == 'address_ru') selected @endif>Address RU</option>
                                     <option value="phone" @if($option->key == 'phone') selected @endif>Phone</option>
                                     <option value="email" @if($option->key == 'email') selected @endif>E-mail</option>
-                                    <option value="map" @if($option->key == 'map') selected @endif>Google or Yandex MAP</option>
-                                    <option value="instagram" @if($option->key == 'instagram') selected @endif>Instagram</option>
-                                    <option value="facebook" @if($option->key == 'facebook') selected @endif>Facebook</option>
+                                    <option value="footer" @if($option->key == 'footer') selected @endif>Footer E-mail</option>
+                                    <option value="whatsapp" @if($option->key == 'whatsapp') selected @endif>Instagram</option>
                                     <option value="telegram" @if($option->key == 'telegram') selected @endif>Telegram</option>
                                 </select>
                                 @if($errors->has('key'))
