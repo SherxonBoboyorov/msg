@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
 use App\Http\Controllers\Admin\DoctorController;
+use App\Http\Controllers\Admin\DocumentController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GoalController;
 use Illuminate\Support\Facades\Auth;
@@ -40,7 +41,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'team' => TeamController::class,
         'faq' => FaqController::class,
         'content' => ContentController::class,
-        'category' => CategoryController::class
+        'category' => CategoryController::class,
+        'document' => DocumentController::class
     ]);
 });
 

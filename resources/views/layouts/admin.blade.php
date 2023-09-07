@@ -184,6 +184,18 @@
                  </li>
                 {{-- end  --}}
 
+                {{-- start  --}}
+                <li class="nav-item">
+                    <a href="{{ route('document.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                     <p>
+                        Document
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
+
 
                 </ul>
             </nav>
