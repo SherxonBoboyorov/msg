@@ -162,6 +162,18 @@
                 {{-- end  --}}
 
 
+                  {{-- start  --}}
+                  <li class="nav-item">
+                    <a href="{{ route('content.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-file-text"></i>
+                     <p>
+                        Document / Content
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
+
                 </ul>
             </nav>
         </div>

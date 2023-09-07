@@ -4,3 +4,4 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
 <script> Swal.fire({position: 'center',icon: 'success',title: 'Sent successfully',showConfirmButton: false,timer: 1500})</script>
 @endif
+
