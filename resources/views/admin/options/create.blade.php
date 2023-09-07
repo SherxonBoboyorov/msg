@@ -29,6 +29,8 @@
                                   <option value="address_de">Address DE</option>
                                   <option value="address_en">Address EN</option>
                                   <option value="address_ru">Address Ru</option>
+                                  <option value="instagram">Instagram</option>
+                                  <option value="facebook">Facebook</option>
                                   <option value="phone">Phone</option>
                                   <option value="email">E-mail</option>
                                   <option value="footer">Footer E-mail</option>
