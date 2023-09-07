@@ -18,6 +18,8 @@ use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\TreatmentController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -52,7 +54,8 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
-        //
+        Route::get('/', [IndexController::class, 'homepage'])->name('/');
+        Route::get('treatment', [TreatmentController::class, 'treatment'])->name('treatment');
  });
 
 
