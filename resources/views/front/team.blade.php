@@ -21,65 +21,45 @@
     <!-- main start -->
     <div class="main w-full mx-auto px-3 pb-4">
       <div class="main-content mx-auto max-w-screen-xl  py-7 sm:py-16">
+        @foreach($goals as $goal)
         <div class="h-fit max-w-screen-xl px-4 mx-auto  ">
-          <div
-            class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
-            <div
-              class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center">
+          <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
+            <div class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center">
               <div class="text-content">
                 <div class=" mb-7 decription max-h-[500px] text-[16px] max-sm:text-[14px] overflow-hidden">
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
+                 {!! $goal->{'sub_content_' . app()->getLocale()} !!}
                 </div>
               </div>
             </div>
 
-            <div
-              class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]">
-              <img src="http://uybozorim.sosgroup.uz/upload/page/21-08-2023/page.jpg" alt=""
-                class="w-full h-full object-cover" />
+            <div class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]">
+              <img src="{{ asset($goal->image) }}" alt="" class="w-full h-full object-cover" />
             </div>
+
           </div>
         </div>
         <div class="text-content my-6">
           <div class=" mb-7 decription max-h-[500px] text-[16px] max-sm:text-[14px] overflow-hidden">
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con
+            {!! $goal->{'content_' . app()->getLocale()} !!}
           </div>
         </div>
-        <div class="card-wrapper my-7 w-full">
-          <!-- foreach start -->
+        @endforeach
 
+
+
+
+        <div class="card-wrapper my-7 w-full">
+          @foreach($teams as $team)
           <div class="card w-full mb-7 shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] rounded-md p-7 max-sm:px-4 h-fit">
             <div class="card-content flex max-sm:flex-wrap items-center w-full h-full">
               <div class="img-content mr-5 h-[150px] max-sm:mx-auto w-[150px] max-sm:h-[100px] max-sm:w-[100px]">
-                <img src="./src/public/images/member.png" alt="" class="w-full h-full object-cover">
+                <img src="{{ asset($team->image) }}" alt="" class="w-full h-full object-cover">
               </div>
               <div class="text-content md:w-[80%] sm:w-[68%] max-sm:w-full max-sm:mt-3 flex items-center">
                 <div class="text-body max-sm:text-center  h-fit w-full">
-                  <div class="title text-[20px] font-[600] w-full truncate">Courtney Ramos</div>
+                  <div class="title text-[20px] font-[600] w-full truncate">{{ $team->{'name_' . app()->getLocale()} }}</div>
                   <div class="description my-1 text-[16px] max-h-[75px] overflow-hidden">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero possimus debitis tempora ducimus
-                    dolores optio fugiat nihil recusandae, beatae sapiente est odio ab voluptate quisquam cumque autem
-                    ipsum aliquid vitae!
+                    {!! $team->{'content_' . app()->getLocale()} !!}
                   </div>
                   <div class="phone-number max-sm:mx-auto w-fit flex items-center">
                     <span class="mr-2">
@@ -89,8 +69,8 @@
                           fill="#D60000" />
                       </svg>
                     </span>
-                    <a href="tel:+99 893 505 45 05" class="font-[600] text-[18px]">
-                      +99 893 505 45 05
+                    <a href="tel:{{ $team->phone }}" class="font-[600] text-[18px]">
+                      {{ $team->phone }}
                     </a>
                   </div>
                   <div class="email flex max-sm:mx-auto w-fit items-center">
@@ -111,8 +91,8 @@
                         </defs>
                       </svg>
                     </span>
-                    <a href="mailto:info@cort.com" class="font-[600] text-[18px]">
-                      info@cort.com
+                    <a href="mailto:{{ $team->email }}" class="font-[600] text-[18px]">
+                      {{ $team->email }}
                     </a>
                   </div>
                 </div>
@@ -122,8 +102,7 @@
 
             </div>
           </div>
-
-          <!-- foreach end -->
+          @endforeach
         </div>
         <!-- main end -->
       </div>

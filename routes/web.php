@@ -23,6 +23,9 @@ use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\InformationController;
 use App\Http\Controllers\Front\MedicalController;
 use App\Http\Controllers\Front\NursesController;
+use App\Http\Controllers\Front\OfferController;
+use App\Http\Controllers\Front\OurTeamController;
+use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\TreatmentController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -64,6 +67,11 @@ Route::group(
         Route::get('information', [InformationController::class, 'information'])->name('information');
         Route::get('doctor', [MedicalController::class, 'doctor'])->name('doctor');
         Route::get('nurse', [NursesController::class, 'nurse'])->name('nurse');
+        Route::get('partners', [PartnersController::class, 'partners'])->name('partners');
+        Route::get('ourTeam', [OurTeamController::class, 'ourTeam'])->name('ourTeam');
+        Route::get('offer', [OfferController::class, 'offer'])->name('offer');
+
+        
  });
 
 

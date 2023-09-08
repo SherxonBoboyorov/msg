@@ -85,8 +85,8 @@
               Cooperations
             </div>
             <div class="dropdown">
-              <a href="./partners.html"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-              <a href="./offer.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+              <a href="{{ route('partners') }}"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
+              <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
             </div>
           </div>
           <div class="about-link nav-link w-fit">
@@ -95,7 +95,7 @@
             </div>
 
             <div class="dropdown">
-              <a href="./team.html" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Our team and goals</a>
+              <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Our team and goals</a>
               <a href="./documents.html" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Documents</a>
               <a href="./faq.html" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">FAQ</a>
             </div>
@@ -154,8 +154,8 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="./partners.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-                <a href="./offer.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+                <a href="{{ route('partners') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
+                <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
               </div>
             </div>
             <div class="about-link nav-link nav-link-responsive width-full">
@@ -167,7 +167,7 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="./team.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our team and goals</a>
+                <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our team and goals</a>
                 <a href="./documents.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Documents</a>
                 <a href="./faq.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">FAQ</a>
               </div>
