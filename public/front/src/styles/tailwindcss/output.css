@@ -3113,6 +3113,10 @@ body,
     margin-top: 0.75rem;
   }
 
+  .max-sm\:mt-\[50px\] {
+    margin-top: 50px;
+  }
+
   .max-sm\:flex {
     display: flex;
   }
@@ -3201,6 +3205,10 @@ body,
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-\[80px\] {
+    margin-top: 80px;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -3274,6 +3282,12 @@ body,
 
   .md\:text-\[60px\] {
     font-size: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:mt-\[120px\] {
+    margin-top: 120px;
   }
 }
 

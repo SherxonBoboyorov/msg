@@ -4,8 +4,7 @@
 
     <!-- main start -->
     <div class="main w-full mx-auto">
-      <div
-        class="back-img w-full mx-auto [@media(min-width:880px)]:h-[650px]  [@media(min-width:768px)]:h-[550px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[320px]">
+      <div class="back-img max-sm:mt-[50px] sm:mt-[80px] lg:mt-[120px] w-full mx-auto [@media(min-width:880px)]:h-[650px]  [@media(min-width:768px)]:h-[550px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[320px]">
         <div class="swiper mySwiper w-full h-full mx-auto">
           <div class="swiper-wrapper w-full h-full mx-auto">
 
@@ -27,8 +26,7 @@
           </div>
           <div class="swiper-button-next md:right-[20px] max-md:right-[10px]"></div>
           <div class="swiper-button-prev md:left-[20px] max-md:left-[10px]"></div>
-          <div
-            class="swiper-pagination bottom-[60px] max-w-screen-xl mx-auto [@media(max-width:1400px)]:px-16 left-0 right-0 m-0 flex justify-start items-center">
+          <div class="swiper-pagination bottom-[60px] max-w-screen-xl mx-auto [@media(max-width:1400px)]:px-16 left-0 right-0 m-0 flex justify-start items-center">
           </div>
         </div>
       </div>
@@ -95,7 +93,7 @@
                 </div>
                 <div class="text text-[20px] mt-5 font-[500]">Diseases / Diagnostics</div>
               </div>
-              <a href="./treatment.html" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
+              <a href="{{ route('diagnostics') }}" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
                 more
                 <span class="ml-2 mt-0.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -114,7 +112,7 @@
                 </div>
                 <div class="text text-[20px] mt-5 font-[500]">Information for patients</div>
               </div>
-              <a href="./treatment.html" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
+              <a href="{{ route('information') }}" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
                 more
                 <span class="ml-2 mt-0.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -134,7 +132,7 @@
                 </div>
                 <div class="text text-[20px] mt-5 font-[500]">Trainings for medical personnel</div>
               </div>
-              <a href="./treatment.html" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
+              <a href="{{ route('doctor') }}" class="more w-fit mx-auto flex justify-center items-center text-cred mt-auto uppercase font-[600]">
                 more
                 <span class="ml-2 mt-0.5">
                   <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link href="./src/styles/tailwindcss/output.css" rel="stylesheet" />
   <link href="./src/styles/sass/custom.css" rel="stylesheet" />
-  <title>MSG | Our partners</title>
+  <title>MSG | Contacts</title>
 </head>
 
 <body>
@@ -276,69 +276,26 @@
     <!-- heder end -->
 
     <!-- back-img start -->
-    <div class="back-img w-full px-3 mx-auto flex justify-start bg-no-repeat bg-center bg-cover items-center h-[220px]"
-      style="background-image: url('./src/public/images/bac-img.png')">
+    <div class="back-img max-sm:mt-[50px] sm:mt-[80px] lg:mt-[120px] w-full px-3 mx-auto flex justify-start bg-no-repeat bg-center bg-cover items-center h-[220px]" style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Our partners
+          Contacts
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="./index.html">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
           -
-          <span class="text-[20px]">Our partners</span>
+          <span class="text-[20px]">Contacts</span>
         </div>
       </div>
     </div>
     <!-- back-img end -->
 
     <!-- main start -->
-    <div class="main w-full mx-auto px-3 pb-6">
-      <div class="main-content mx-auto max-w-screen-xl  py-7 sm:py-16">
-        <div class="card-wrapper my-5 w-full">
-          <!-- foreach start -->
-
-          <div class="card w-full mb-7 shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] rounded-md p-7 max-sm:px-4 h-fit">
-            <div class="card-content flex max-sm:flex-wrap items-center w-full h-full">
-              <div class="img-content mr-5 h-[150px] max-sm:mx-auto w-[150px] max-sm:h-[100px] max-sm:w-[100px]">
-                <img src="./src/public/images/dell-img.png" alt="" class="w-full h-full object-cover">
-              </div>
-              <div class="text-content md:w-[80%] sm:w-[68%] max-sm:w-full max-sm:mt-3 flex items-center">
-                <div class="text-body max-sm:text-center  h-fit w-full">
-                  <div class="description text-dimgray text-[16px] max-h-[125px] overflow-hidden">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero possimus debitis tempora ducimus
-                    dolores optio fugiat nihil recusandae, beatae sapiente est odio ab voluptate quisquam cumque autem
-                    ipsum aliquid vitae!
-                  </div>
-                  <a href="#" class="site text-cred font-[600] text-[18px]">www.dell.com</a>
-                </div>
-                </a>
-              </div>
-              <!-- foreach end -->
-
-            </div>
-          </div>
-
-          <!-- foreach end -->
-        </div>
-        <!-- main end -->
-      </div>
-    </div>
-
-    <!-- contacts start -->
-    <div id="contacts"
-      class="contact mt-auto [@media(max-width:800px)]:h-fit h-[450px] w-full flex flex-wrap justify-between items-start">
-      <div
-        class="map-block [@media(min-width:800px)]:w-1/2 [@media(max-width:800px)]:w-full [@media(max-width:800px)]:h-[350px] h-full [@media(max-width:800px)]:order-2">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.231009806682!2d69.28633837605543!3d41.30383787131055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ad5fbd29243%3A0x772703961f1fdae7!2zMTIg0YPQu9C40YbQsCDQmNGB0YLQuNC60LHQvtC7LCDQotCw0YjQutC10L3RgiAxMDAwNDcsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1693407723575!5m2!1sru!2s"
-          class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border: 0"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div
-        class="text-block flex py-8 items-center bg-white px-10 [@media(min-width:800px)]:w-1/2 [@media(min-width:800px)]:h-full [@media(max-width:800px)]:w-full [@media(max-width:800px)]:h-fit [@media(max-width:800px)]:order-1">
-        <div class="text-content max-w-[600px] overflow-hidden">
-          <div class="title text-[40px]  font-[700] max-sm:text-[32px] uppercase">
-            our Contacts
+    <div class="main w-full mx-auto px-3">
+      <div class="main-content mx-auto max-w-screen-xl py-7 sm:py-16 flex justify-between flex-wrap">
+        <div class="text-content max-w-[600px] overflow-hidden w-[40%] max-sm:w-full mb-5">
+          <div class="title text-[40px]  font-[700] max-sm:text-[32px] ">
+            Make a request
           </div>
 
           <div class="text-content my-3">
@@ -356,12 +313,87 @@
             <a href="mailto:info@msg.com" class="value text-[16px] font-[600]">info@msg.com</a>
           </div>
         </div>
+        <div class="form-content max-w-[600px] overflow-hidden w-[60%] max-sm:w-full">
+          <div class="title text-[40px]  font-[700] max-sm:text-[32px]">
+            Make a request
+          </div>
+
+          <form action="http://uybozorim.sosgroup.uz/uz/save_callback" class="my-3">
+            <div class="input-content">
+              <input required type="text"
+                class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
+                placeholder="Name and surname">
+              <input required type="email"
+                class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
+                placeholder="Email">
+              <input required type="number"
+                class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
+                placeholder="Phone number">
+              <textarea required type="number" rows="4"
+                class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
+                placeholder="Your message"></textarea>
+            </div>
+            <div class="upload mt-1 mb-5 w-full">
+              <input type="file" name="video" class="hidden" onchange="takeFileName(event)" id="file">
+              <label id="fileLabel" for="file"
+                class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase">
+                Upload the medical reports
+              </label>
+            </div>
+            <div class="privacy-policy flex justify-between items-start">
+              <div class="text text-[15px] text-black mr-[60px]">
+                I have read the <span class="text-cred font-[700]">Privacy Policy</span> and agree to the
+                following
+                <span class="text-cred font-[700]">Collection of Personal Data Policy* </span>
+              </div>
+              <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
+                <div class="form-group ">
+                  <input type="checkbox" id="privacy-yes" />
+                  <label for="privacy-yes">Yes</label>
+                </div>
+              </div>
+            </div>
+            <div class="auth mt-3 flex justify-between items-start flex-wrap  ">
+              <div class="text text-[17px] text-black [@media(max-width:576px)]:w-full mb-2">
+                Authorization for third parties<span class="text-cred">*</span>
+              </div>
+              <div class="radio-buttons [@media(max-width:576px)]:ml-[38px] mr-2 flex w-[120px] justify-between">
+                <div class="form-group">
+                  <input type="radio" id="yes" name="boolen" checked />
+                  <label for="yes">Yes</label>
+                </div>
+
+                <div class="form-group">
+                  <input type="radio" id="female" name="boolen" />
+                  <label for="female">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="button-content mt-7 w-full flex items-center">
+              <button id="submitFormBtn" type="submit" disabled
+                class="border-none rounded-md disabled:opacity-[0.7] text-[12px] font-[600] bg-cyellow uppercase py-3 px-7">
+                Send </button>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
-    <!-- contacts end -->
+    <!-- main end -->
+
+    <!-- map start -->
+    <div class="contact h-[450px] w-full flex flex-wrap justify-between mt-auto items-start">
+      <div class="map-block w-full h-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.231009806682!2d69.28633837605543!3d41.30383787131055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ad5fbd29243%3A0x772703961f1fdae7!2zMTIg0YPQu9C40YbQsCDQmNGB0YLQuNC60LHQvtC7LCDQotCw0YjQutC10L3RgiAxMDAwNDcsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1693407723575!5m2!1sru!2s"
+          class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border: 0"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <!-- map end -->
 
     <!-- footer start -->
-    <div class="footer w-full mx-auto bg-[#000000] pt-5 ">
+    <div class="footer w-full mx-auto bg-[#000000]">
       <div class="top-footer px-4 max-w-screen-xl mx-auto max-sm:flex-wrap flex justify-between py-10">
         <a href="./index.html" class="block logo-content w-[170px] mb-5 ">
           <img src="./src/public/icons/white-logo.png" alt="" class="w-full h-fit">
@@ -427,6 +459,7 @@
       </div>
     </div>
     <!-- footer end -->
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"

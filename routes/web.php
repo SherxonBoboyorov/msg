@@ -18,7 +18,11 @@ use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Front\DiagnosticsController;
 use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\InformationController;
+use App\Http\Controllers\Front\MedicalController;
+use App\Http\Controllers\Front\NursesController;
 use App\Http\Controllers\Front\TreatmentController;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -56,6 +60,10 @@ Route::group(
     ], function(){
         Route::get('/', [IndexController::class, 'homepage'])->name('/');
         Route::get('treatment', [TreatmentController::class, 'treatment'])->name('treatment');
+        Route::get('diagnostics', [DiagnosticsController::class, 'diagnostics'])->name('diagnostics');
+        Route::get('information', [InformationController::class, 'information'])->name('information');
+        Route::get('doctor', [MedicalController::class, 'doctor'])->name('doctor');
+        Route::get('nurse', [NursesController::class, 'nurse'])->name('nurse');
  });
 
 

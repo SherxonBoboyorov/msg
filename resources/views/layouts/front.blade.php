@@ -65,7 +65,7 @@
       <div class="header-bottom w-full pt-3 px-3 bg-[#F6F6F6] max-lg:hidden block">
         <div class="header-content mx-auto max-w-screen-xl flex items-center justify-between ">
           <div class="home-link nav-link w-fit ">
-            <a href="./index.html" class="text-[16px] font-[600] uppercase">
+            <a href="{{ route('/') }}" class="text-[16px] font-[600] uppercase">
               Main Menu
             </a>
           </div>
@@ -74,10 +74,10 @@
               Services
             </div>
             <div class="dropdown">
-              <a href=".{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-              <a href="./diagnostics.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-              <a href="./information.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-              <a href="./trainings.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+              <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
+              <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
+              <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
+              <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
             </div>
           </div>
           <div class="cooperations-link nav-link w-fit">
@@ -139,9 +139,9 @@
               </div>
               <div class="dropdown hidden">
                 <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-                <a href="./diagnostics.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-                <a href="./information.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-                <a href="./trainings.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+                <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
+                <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
+                <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
               </div>
             </div>
             <div class="cooperations-link nav-link nav-link-responsive width-full">
@@ -205,10 +205,8 @@
 
 
      <!-- contacts start -->
-     <div id="contacts"
-     class="contact mt-auto [@media(max-width:800px)]:h-fit h-[450px] w-full flex flex-wrap justify-between items-start">
-     <div
-       class="map-block [@media(min-width:800px)]:w-1/2 [@media(max-width:800px)]:w-full [@media(max-width:800px)]:h-[350px] h-full [@media(max-width:800px)]:order-2">
+     <div id="contacts" class="contact mt-auto [@media(max-width:800px)]:h-fit h-[450px] w-full flex flex-wrap justify-between items-start">
+     <div class="map-block [@media(min-width:800px)]:w-1/2 [@media(max-width:800px)]:w-full [@media(max-width:800px)]:h-[350px] h-full [@media(max-width:800px)]:order-2">
        <iframe
          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.231009806682!2d69.28633837605543!3d41.30383787131055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ad5fbd29243%3A0x772703961f1fdae7!2zMTIg0YPQu9C40YbQsCDQmNGB0YLQuNC60LHQvtC7LCDQotCw0YjQutC10L3RgiAxMDAwNDcsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1693407723575!5m2!1sru!2s"
          class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border: 0"
@@ -243,8 +241,8 @@
      <!-- footer start -->
      <div class="footer w-full mx-auto bg-[#000000] pt-5 ">
         <div class="top-footer px-4 max-w-screen-xl mx-auto max-sm:flex-wrap flex justify-between py-10">
-          <a href="./index.html" class="block logo-content w-[170px] mb-5 ">
-            <img src="./src/public/icons/white-logo.png" alt="" class="w-full h-fit">
+          <a href="{{ route('/') }}" class="block logo-content w-[170px] mb-5 ">
+            <img src="{{ asset('front/src/public/icons/white-logo.png') }}" alt="" class="w-full h-fit">
           </a>
           <div class="text-content sm:pl-16 w-full flex justify-between items-start">
             <div class="text-block opacity-[0.6] mr-5">
@@ -290,7 +288,7 @@
         </div>
         <div class="bottom-footer px-4 py-5 border-t border-[#616161] w-full mx-auto">
           <div class="text-content max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
-            <a href="{{ route('/') }}" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
+            <a class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
               “Medical service in Germany” All rights reserved
             </a>
             <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
