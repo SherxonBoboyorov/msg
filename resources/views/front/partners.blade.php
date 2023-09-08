@@ -7,12 +7,12 @@
       style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Our partners
+          @lang('main.our_partners')
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
-          <span class="text-[20px]">Our partners</span>
+          <span class="text-[20px]">@lang('main.our_partners')</span>
         </div>
       </div>
     </div>

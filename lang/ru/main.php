@@ -39,6 +39,8 @@ return [
    'yes' => 'Да',
    'authorization_for_third_parties' => 'Разрешение для третьих лиц',
    'no' => 'Нет',
-   'send' => 'Отправить'
+   'send' => 'Отправить',
+   'for_doctors' => 'Для врачей',
+   'for_nurses' => 'Для медсестер'
 
 ];

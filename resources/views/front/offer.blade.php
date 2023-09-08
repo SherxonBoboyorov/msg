@@ -10,7 +10,7 @@
           Offer cooperation
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
           <span class="text-[20px]">Offer cooperation</span>
         </div>

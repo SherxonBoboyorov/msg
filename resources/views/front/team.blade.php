@@ -7,12 +7,12 @@
       style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Our team and goals
+          @lang('main.our_team_and_goals')
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
-          <span class="text-[20px]">Our team and goals</span>
+          <span class="text-[20px]">@lang('main.our_team_and_goals')</span>
         </div>
       </div>
     </div>
@@ -44,9 +44,6 @@
           </div>
         </div>
         @endforeach
-
-
-
 
         <div class="card-wrapper my-7 w-full">
           @foreach($teams as $team)

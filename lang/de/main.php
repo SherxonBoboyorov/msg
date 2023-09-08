@@ -39,5 +39,8 @@ return [
    'yes' => 'Ja',
    'authorization_for_third_parties' => 'Autorisatie voor derden',
    'no' => 'Nee',
-   'send' => 'Verzenden'
+   'send' => 'Verzenden',
+   'for_doctors' => 'Voor artsen',
+   'for_nurses' => 'Voor verpleegkundigen'
+
 ];

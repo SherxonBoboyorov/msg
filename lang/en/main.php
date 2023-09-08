@@ -39,5 +39,8 @@ return [
    'yes' => 'Yes',
    'authorization_for_third_parties' => 'Authorization for third parties',
    'no' => 'No',
-   'send' => 'Send'
+   'send' => 'Send',
+   'for_doctors' => 'For Doctors',
+   'for_nurses' => 'For Nurses'
+   
 ];
