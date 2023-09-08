@@ -41,6 +41,6 @@ return [
    'no' => 'No',
    'send' => 'Send',
    'for_doctors' => 'For Doctors',
-   'for_nurses' => 'For Nurses'
-   
+   'for_nurses' => 'For Nurses',
+   'make_a_request' => 'Make a request'
 ];

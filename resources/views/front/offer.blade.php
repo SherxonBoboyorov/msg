@@ -7,12 +7,12 @@
       style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Offer cooperation
+          @lang('main.offer_cooperation')
         </div>
         <div class="decription text-white">
           <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
-          <span class="text-[20px]">Offer cooperation</span>
+          <span class="text-[20px]">@lang('main.offer_cooperation')</span>
         </div>
       </div>
     </div>

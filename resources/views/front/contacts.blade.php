@@ -69,43 +69,43 @@
         <div class="header-content mx-auto max-w-screen-xl flex items-center justify-between ">
           <div class="home-link nav-link w-fit ">
             <a href="{{ route('/') }}" class="text-[16px] font-[600] uppercase">
-              Main Menu
+              @lang('main.home')
             </a>
           </div>
           <div class="services-link nav-link w-fit ">
             <div class="text-[16px] font-[600] div uppercase">
-              Services
+              @lang('main.services')
             </div>
             <div class="dropdown">
-              <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-              <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-              <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-              <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+              <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.treatment_in_germany')</a>
+              <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.diseases_diagnostics')</a>
+              <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.information_for_patients')</a>
+              <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.trainings_for_medical_personnel')</a>
             </div>
           </div>
           <div class="cooperations-link nav-link w-fit">
             <div class="text-[16px] font-[600] div uppercase">
-              Cooperations
+              @lang('main.cooperations')
             </div>
             <div class="dropdown">
-              <a href="{{ route('partners') }}"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-              <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+              <a href="{{ route('partners') }}"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_partners')</a>
+              <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.offer_cooperation')</a>
             </div>
           </div>
           <div class="about-link nav-link w-fit">
             <div class="text-[16px] font-[600] div uppercase">
-              About Us
+              @lang('main.about_us')
             </div>
 
             <div class="dropdown">
-              <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Our team and goals</a>
-              <a href="{{ route('documents', ['id' => 1]) }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Documents</a>
-              <a href="{{ route('faq') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">FAQ</a>
+              <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.our_team_and_goals')</a>
+              <a href="{{ route('documents', ['id' => 1]) }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.documents')</a>
+              <a href="{{ route('faq') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.faq')</a>
             </div>
           </div>
           <div class="contacts-link nav-link w-fit">
             <a href="{{ route('contacts') }}" class="text-[16px] font-[600] uppercase">
-              Contacts
+              @lang('main.contacts')
             </a>
           </div>
         </div>
@@ -132,12 +132,12 @@
           <div id="link-wrapper" class="links w-full">
             <div class="home-link nav-link nav-link-responsive w-fit">
               <a href="{{ route('/') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">
-                Main Menu
+                @lang('main.home')
               </a>
             </div>
             <div class="services-link nav-link nav-link-responsive width-full">
               <div id="services-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">
-                Services
+                @lang('main.services')
 
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="group-hover:fill-cred transition-all duration-300">
                   <path
@@ -145,28 +145,28 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-                <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-                <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-                <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+                <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.treatment_in_germany')</a>
+                <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.diseases_diagnostics')</a>
+                <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.information_for_patients')</a>
+                <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.trainings_for_medical_personnel')</a>
               </div>
             </div>
             <div class="cooperations-link nav-link nav-link-responsive width-full">
               <div id="cooperations-dropdown"
                 class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">
-                Cooperations
+                @lang('main.cooperations')
 
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="group-hover:fill-cred transition-all duration-300">
                   <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('partners') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-                <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+                <a href="{{ route('partners') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_partners')</a>
+                <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.offer_cooperation')</a>
               </div>
             </div>
             <div class="about-link nav-link nav-link-responsive width-full">
-              <div id="about-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase"> About Us
+              <div id="about-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">@lang('main.about_us')
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                   class="group-hover:fill-cred transition-all duration-300 ">
                   <path
@@ -174,14 +174,14 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our team and goals</a>
-                <a href="{{ route('documents',['id' => 1]) }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Documents</a>
-                <a href="{{ route('faq') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">FAQ</a>
+                <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_team_and_goals')</a>
+                <a href="{{ route('documents',['id' => 1]) }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.documents')</a>
+                <a href="{{ route('faq') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.faq')</a>
               </div>
             </div>
             <div class="contacts-link nav-link nav-link-responsive w-fit">
               <a href="{{ route('contacts') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">
-                Contacts
+                @lang('main.contacts')
               </a>
             </div>
           </div>
@@ -212,12 +212,12 @@
     <div class="back-img max-sm:mt-[50px] sm:mt-[80px] lg:mt-[120px] w-full px-3 mx-auto flex justify-start bg-no-repeat bg-center bg-cover items-center h-[220px]" style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Contacts
+          @lang('main.contacts')
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
-          <span class="text-[20px]">Contacts</span>
+          <span class="text-[20px]">@lang('main.contacts')</span>
         </div>
       </div>
     </div>
@@ -228,27 +228,27 @@
       <div class="main-content mx-auto max-w-screen-xl py-7 sm:py-16 flex justify-between flex-wrap">
         <div class="text-content max-w-[600px] overflow-hidden w-[40%] max-sm:w-full mb-5">
           <div class="title text-[40px]  font-[700] max-sm:text-[32px] ">
-            Make a request
+            @lang('main.make_a_request')
           </div>
 
           <div class="text-content my-3">
-            <div class="key text-cred text-[14px] font-[400]">Phone number</div>
+            <div class="key text-cred text-[14px] font-[400]">@lang('main.phone_number')</div>
             <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a>
           </div>
           <div class="text-content my-3">
-            <div class="key text-cred text-[14px] font-[400]">Address</div>
+            <div class="key text-cred text-[14px] font-[400]">@lang('main.address')</div>
             <a>
             {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
             </a>
           </div>
           <div class="text-content my-3">
-            <div class="key text-cred text-[14px] font-[400]">Email</div>
+            <div class="key text-cred text-[14px] font-[400]">@lang('main.email')</div>
             <a href="mailto:{{ $options->where('key', 'email')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email')->first()->value }}</a>
           </div>
         </div>
         <div class="form-content max-w-[600px] overflow-hidden w-[60%] max-sm:w-full">
           <div class="title text-[40px]  font-[700] max-sm:text-[32px]">
-            Make a request
+            @lang('main.make_a_request')
           </div>
 
           <form action="http://uybozorim.sosgroup.uz/uz/save_callback" class="my-3">
@@ -322,66 +322,66 @@
     </div>
     <!-- map end -->
 
-     <!-- footer start -->
-     <div class="footer w-full mx-auto bg-[#000000] pt-5 ">
-      <div class="top-footer px-4 max-w-screen-xl mx-auto max-sm:flex-wrap flex justify-between py-10">
-        <a href="{{ route('/') }}" class="block logo-content w-[170px] mb-5 ">
-          <img src="{{ asset('front/src/public/icons/white-logo.png') }}" alt="" class="w-full h-fit">
-        </a>
-        <div class="text-content sm:pl-16 w-full flex justify-between items-start">
-          <div class="text-block opacity-[0.6] mr-5">
-            <div class="text text-[16px] text-white mb-3">Terms of service</div>
-            <div class="text text-[16px] text-white mb-3">Data protection</div>
-            <div class="text text-[16px] text-white mb-3">Imprint</div>
-          </div>
-          <div class="text-block ">
-            <a href="{{ $options->where('key', 'footer')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
-              <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-cred mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
-                  <path  d="M15.8337 3.3335H4.16699C3.50395 3.3335 2.86807 3.59689 2.39923 4.06573C1.93038 4.53457 1.66699 5.17045 1.66699 5.8335V14.1668C1.66699 14.8299 1.93038 15.4658 2.39923 15.9346C2.86807 16.4034 3.50395 16.6668 4.16699 16.6668H15.8337C16.4967 16.6668 17.1326 16.4034 17.6014 15.9346C18.0703 15.4658 18.3337 14.8299 18.3337 14.1668V5.8335C18.3337 5.17045 18.0703 4.53457 17.6014 4.06573C17.1326 3.59689 16.4967 3.3335 15.8337 3.3335ZM15.8337 5.00016L10.417 8.72516C10.2903 8.7983 10.1466 8.83681 10.0003 8.83681C9.85404 8.83681 9.71034 8.7983 9.58366 8.72516L4.16699 5.00016H15.8337Z" fill="white" />
-                </svg>
-              </div>
-              Email
-            </a>
-            <a href="{{ $options->where('key', 'whatsapp')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
-              <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-[#25D366] mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
-                  <path d="M15.8747 4.09155C15.1107 3.31982 14.2007 2.70794 13.1977 2.2916C12.1948 1.87525 11.1189 1.66277 10.033 1.66655C5.48301 1.66655 1.77467 5.37489 1.77467 9.92489C1.77467 11.3832 2.15801 12.7999 2.87467 14.0499L1.70801 18.3332L6.08301 17.1832C7.29134 17.8416 8.64967 18.1916 10.033 18.1916C14.583 18.1916 18.2913 14.4832 18.2913 9.93322C18.2913 7.72489 17.433 5.64989 15.8747 4.09155ZM10.033 16.7916C8.79967 16.7916 7.59134 16.4582 6.53301 15.8332L6.28301 15.6832L3.68301 16.3666L4.37467 13.8332L4.20801 13.5749C3.5228 12.4807 3.15896 11.2159 3.15801 9.92489C3.15801 6.14155 6.24134 3.05822 10.0247 3.05822C11.858 3.05822 13.583 3.77489 14.8747 5.07489C15.5142 5.71152 16.0211 6.46877 16.3658 7.30274C16.7106 8.13671 16.8864 9.03081 16.883 9.93322C16.8997 13.7166 13.8163 16.7916 10.033 16.7916ZM13.7997 11.6582C13.5913 11.5582 12.5747 11.0582 12.3913 10.9832C12.1997 10.9166 12.0663 10.8832 11.9247 11.0832C11.783 11.2916 11.3913 11.7582 11.2747 11.8916C11.158 12.0332 11.033 12.0499 10.8247 11.9416C10.6163 11.8416 9.94967 11.6166 9.16634 10.9166C8.54967 10.3666 8.14134 9.69155 8.01634 9.48322C7.89967 9.27489 7.99967 9.16655 8.10801 9.05822C8.19967 8.96655 8.31634 8.81655 8.41634 8.69989C8.51634 8.58322 8.55801 8.49155 8.62467 8.35822C8.69134 8.21655 8.65801 8.09989 8.60801 7.99989C8.55801 7.89989 8.14134 6.88322 7.97467 6.46655C7.80801 6.06655 7.63301 6.11655 7.50801 6.10822H7.10801C6.96634 6.10822 6.74967 6.15822 6.55801 6.36655C6.37467 6.57489 5.84134 7.07489 5.84134 8.09155C5.84134 9.10822 6.58301 10.0916 6.68301 10.2249C6.78301 10.3666 8.14134 12.4499 10.208 13.3416C10.6997 13.5582 11.083 13.6832 11.383 13.7749C11.8747 13.9332 12.3247 13.9082 12.683 13.8582C13.083 13.7999 13.908 13.3582 14.0747 12.8749C14.2497 12.3916 14.2497 11.9832 14.1913 11.8916C14.133 11.7999 14.008 11.7582 13.7997 11.6582Z" fill="white" />
-                </svg>
-                </svg>
-              </div>
-              Whatsapp
-            </a>
-            <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
-              <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-[#239FDB] mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
-                  <g clip-path="url(#clip0_6003_116)">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4809 3.69164C16.6868 3.60496 16.9122 3.57507 17.1336 3.60507C17.355 3.63507 17.5643 3.72386 17.7398 3.86221C17.9152 4.00056 18.0504 4.1834 18.1312 4.39171C18.212 4.60001 18.2355 4.82617 18.1992 5.04664L16.3092 16.5108C16.1259 17.6166 14.9125 18.2508 13.8984 17.7C13.05 17.2391 11.79 16.5291 10.6567 15.7883C10.09 15.4175 8.3542 14.23 8.56754 13.385C8.75087 12.6625 11.6675 9.94747 13.3342 8.3333C13.9884 7.69914 13.69 7.3333 12.9175 7.91664C10.9984 9.36497 7.9192 11.5675 6.90087 12.1875C6.00254 12.7341 5.5342 12.8275 4.9742 12.7341C3.95254 12.5641 3.00504 12.3008 2.2317 11.98C1.1867 11.5466 1.23754 10.11 2.23087 9.69164L16.4809 3.69164Z" fill="white" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_6003_116">
-                      <rect width="20" height="20" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              Telegram
-            </a>
-          </div>
+   <!-- footer start -->
+   <div class="footer w-full mx-auto bg-[#000000] pt-5 ">
+    <div class="top-footer px-4 max-w-screen-xl mx-auto max-sm:flex-wrap flex justify-between py-10">
+      <a href="{{ route('/') }}" class="block logo-content w-[170px] mb-5 ">
+        <img src="{{ asset('front/src/public/icons/white-logo.png') }}" alt="" class="w-full h-fit">
+      </a>
+      <div class="text-content sm:pl-16 w-full flex justify-between items-start">
+        <div class="text-block opacity-[0.6] mr-5">
+          <div class="text text-[16px] text-white mb-3">@lang('main.terms_of_service')</div>
+          <div class="text text-[16px] text-white mb-3">@lang('main.data_protection')</div>
+          <div class="text text-[16px] text-white mb-3">@lang('main.imprint')</div>
         </div>
-      </div>
-      <div class="bottom-footer px-4 py-5 border-t border-[#616161] w-full mx-auto">
-        <div class="text-content max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
-          <a class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
-            “Medical service in Germany” All rights reserved
+        <div class="text-block ">
+          <a href="{{ $options->where('key', 'footer')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
+            <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-cred mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
+                <path  d="M15.8337 3.3335H4.16699C3.50395 3.3335 2.86807 3.59689 2.39923 4.06573C1.93038 4.53457 1.66699 5.17045 1.66699 5.8335V14.1668C1.66699 14.8299 1.93038 15.4658 2.39923 15.9346C2.86807 16.4034 3.50395 16.6668 4.16699 16.6668H15.8337C16.4967 16.6668 17.1326 16.4034 17.6014 15.9346C18.0703 15.4658 18.3337 14.8299 18.3337 14.1668V5.8335C18.3337 5.17045 18.0703 4.53457 17.6014 4.06573C17.1326 3.59689 16.4967 3.3335 15.8337 3.3335ZM15.8337 5.00016L10.417 8.72516C10.2903 8.7983 10.1466 8.83681 10.0003 8.83681C9.85404 8.83681 9.71034 8.7983 9.58366 8.72516L4.16699 5.00016H15.8337Z" fill="white" />
+              </svg>
+            </div>
+            @lang('main.email')
           </a>
-          <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
-            © Copyright 2023 - SOS Group
+          <a href="{{ $options->where('key', 'whatsapp')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
+            <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-[#25D366] mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
+                <path d="M15.8747 4.09155C15.1107 3.31982 14.2007 2.70794 13.1977 2.2916C12.1948 1.87525 11.1189 1.66277 10.033 1.66655C5.48301 1.66655 1.77467 5.37489 1.77467 9.92489C1.77467 11.3832 2.15801 12.7999 2.87467 14.0499L1.70801 18.3332L6.08301 17.1832C7.29134 17.8416 8.64967 18.1916 10.033 18.1916C14.583 18.1916 18.2913 14.4832 18.2913 9.93322C18.2913 7.72489 17.433 5.64989 15.8747 4.09155ZM10.033 16.7916C8.79967 16.7916 7.59134 16.4582 6.53301 15.8332L6.28301 15.6832L3.68301 16.3666L4.37467 13.8332L4.20801 13.5749C3.5228 12.4807 3.15896 11.2159 3.15801 9.92489C3.15801 6.14155 6.24134 3.05822 10.0247 3.05822C11.858 3.05822 13.583 3.77489 14.8747 5.07489C15.5142 5.71152 16.0211 6.46877 16.3658 7.30274C16.7106 8.13671 16.8864 9.03081 16.883 9.93322C16.8997 13.7166 13.8163 16.7916 10.033 16.7916ZM13.7997 11.6582C13.5913 11.5582 12.5747 11.0582 12.3913 10.9832C12.1997 10.9166 12.0663 10.8832 11.9247 11.0832C11.783 11.2916 11.3913 11.7582 11.2747 11.8916C11.158 12.0332 11.033 12.0499 10.8247 11.9416C10.6163 11.8416 9.94967 11.6166 9.16634 10.9166C8.54967 10.3666 8.14134 9.69155 8.01634 9.48322C7.89967 9.27489 7.99967 9.16655 8.10801 9.05822C8.19967 8.96655 8.31634 8.81655 8.41634 8.69989C8.51634 8.58322 8.55801 8.49155 8.62467 8.35822C8.69134 8.21655 8.65801 8.09989 8.60801 7.99989C8.55801 7.89989 8.14134 6.88322 7.97467 6.46655C7.80801 6.06655 7.63301 6.11655 7.50801 6.10822H7.10801C6.96634 6.10822 6.74967 6.15822 6.55801 6.36655C6.37467 6.57489 5.84134 7.07489 5.84134 8.09155C5.84134 9.10822 6.58301 10.0916 6.68301 10.2249C6.78301 10.3666 8.14134 12.4499 10.208 13.3416C10.6997 13.5582 11.083 13.6832 11.383 13.7749C11.8747 13.9332 12.3247 13.9082 12.683 13.8582C13.083 13.7999 13.908 13.3582 14.0747 12.8749C14.2497 12.3916 14.2497 11.9832 14.1913 11.8916C14.133 11.7999 14.008 11.7582 13.7997 11.6582Z" fill="white" />
+              </svg>
+              </svg>
+            </div>
+            Whatsapp
+          </a>
+          <a href="{{ $options->where('key', 'telegram')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
+            <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-[#239FDB] mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_6003_116)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4809 3.69164C16.6868 3.60496 16.9122 3.57507 17.1336 3.60507C17.355 3.63507 17.5643 3.72386 17.7398 3.86221C17.9152 4.00056 18.0504 4.1834 18.1312 4.39171C18.212 4.60001 18.2355 4.82617 18.1992 5.04664L16.3092 16.5108C16.1259 17.6166 14.9125 18.2508 13.8984 17.7C13.05 17.2391 11.79 16.5291 10.6567 15.7883C10.09 15.4175 8.3542 14.23 8.56754 13.385C8.75087 12.6625 11.6675 9.94747 13.3342 8.3333C13.9884 7.69914 13.69 7.3333 12.9175 7.91664C10.9984 9.36497 7.9192 11.5675 6.90087 12.1875C6.00254 12.7341 5.5342 12.8275 4.9742 12.7341C3.95254 12.5641 3.00504 12.3008 2.2317 11.98C1.1867 11.5466 1.23754 10.11 2.23087 9.69164L16.4809 3.69164Z" fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_6003_116">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            Telegram
           </a>
         </div>
       </div>
     </div>
-    <!-- footer end -->
+    <div class="bottom-footer px-4 py-5 border-t border-[#616161] w-full mx-auto">
+      <div class="text-content max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
+        <a class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
+          @lang('main.all_rights_reserved')
+        </a>
+        <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
+          © Copyright {{ date('Y') }} - SOS Group
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
 
   </div>
 

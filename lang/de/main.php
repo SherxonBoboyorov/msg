@@ -41,6 +41,7 @@ return [
    'no' => 'Nee',
    'send' => 'Verzenden',
    'for_doctors' => 'Voor artsen',
-   'for_nurses' => 'Voor verpleegkundigen'
+   'for_nurses' => 'Voor verpleegkundigen',
+   'make_a_request' => 'Een verzoek doen'
 
 ];

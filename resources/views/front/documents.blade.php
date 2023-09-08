@@ -6,12 +6,12 @@
       style="background-image: url('{{ asset('front/src/public/images/bac-img.png') }}')">
       <div class="text-content max-w-screen-xl w-full mx-auto h-fit">
         <div class="title text-[#ffffff] text-[40px] font-[600] max-sm:text-[32px]">
-          Documents
+          @lang('main.documents')
         </div>
         <div class="decription text-white">
-          <a class="text-[20px]" href="{{ route('/') }}">Main</a>
+          <a class="text-[20px]" href="{{ route('/') }}">@lang('main.home')</a>
           -
-          <span class="text-[20px]">Documents</span>
+          <span class="text-[20px]">@lang('main.documents')</span>
         </div>
       </div>
     </div>
