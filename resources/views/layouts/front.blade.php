@@ -96,8 +96,8 @@
 
             <div class="dropdown">
               <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Our team and goals</a>
-              <a href="./documents.html" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Documents</a>
-              <a href="./faq.html" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">FAQ</a>
+              <a href="{{ route('documents', ['id' => 1]) }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Documents</a>
+              <a href="{{ route('faq') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">FAQ</a>
             </div>
           </div>
           <div class="contacts-link nav-link w-fit">
@@ -168,8 +168,8 @@
               </div>
               <div class="dropdown hidden">
                 <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our team and goals</a>
-                <a href="./documents.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Documents</a>
-                <a href="./faq.html" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">FAQ</a>
+                <a href="{{ route('documents',['id' => 1]) }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Documents</a>
+                <a href="{{ route('faq') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">FAQ</a>
               </div>
             </div>
             <div class="contacts-link nav-link nav-link-responsive w-fit">

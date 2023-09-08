@@ -19,6 +19,8 @@ use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Front\DiagnosticsController;
+use App\Http\Controllers\Front\DucumentsController;
+use App\Http\Controllers\Front\FaqsController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\InformationController;
 use App\Http\Controllers\Front\MedicalController;
@@ -70,6 +72,8 @@ Route::group(
         Route::get('partners', [PartnersController::class, 'partners'])->name('partners');
         Route::get('ourTeam', [OurTeamController::class, 'ourTeam'])->name('ourTeam');
         Route::get('offer', [OfferController::class, 'offer'])->name('offer');
+        Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
+        Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
 
         
  });

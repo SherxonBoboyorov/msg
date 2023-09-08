@@ -16,4 +16,9 @@ class Category extends Model
         'title_en',
         'title_ru'
     ];
+
+    public function documents()
+    {
+        return $this->hasMany(Document::class);
+    }
 }
