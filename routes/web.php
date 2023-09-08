@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\NurseController;
+use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Front\ContactsController;
 use App\Http\Controllers\Front\DiagnosticsController;
 use App\Http\Controllers\Front\DucumentsController;
 use App\Http\Controllers\Front\FaqsController;
@@ -53,7 +55,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'faq' => FaqController::class,
         'content' => ContentController::class,
         'category' => CategoryController::class,
-        'document' => DocumentController::class
+        'document' => DocumentController::class,
+        'options' => OptionsController::class
     ]);
 });
 
@@ -74,6 +77,7 @@ Route::group(
         Route::get('offer', [OfferController::class, 'offer'])->name('offer');
         Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
+        Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
 
         
  });

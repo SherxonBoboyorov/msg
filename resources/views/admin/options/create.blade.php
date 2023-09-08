@@ -34,11 +34,11 @@
                                   <option value="phone">Phone</option>
                                   <option value="email">E-mail</option>
                                   <option value="footer">Footer E-mail</option>
-                                  <option value="whatsapp">Instagram</option>
+                                  <option value="whatsapp">Whatsapp</option>
                                   <option value="telegram">Telegram</option>
                                   <option value="meta_title_de">Meta title De</option>
                                   <option value="meta_title_en">Meta title En</option>
-                                  <option value="meta_title_ri">Meta title RU</option>
+                                  <option value="meta_title_ru">Meta title RU</option>
                                   <option value="meta_description_de">Meta description DE</option>
                                   <option value="meta_description_en">Meta description EN</option>
                                   <option value="meta_description_ru">Meta description RU</option>

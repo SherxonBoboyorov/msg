@@ -35,7 +35,7 @@
                                     <option value="phone" @if($option->key == 'phone') selected @endif>Phone</option>
                                     <option value="email" @if($option->key == 'email') selected @endif>E-mail</option>
                                     <option value="footer" @if($option->key == 'footer') selected @endif>Footer E-mail</option>
-                                    <option value="whatsapp" @if($option->key == 'whatsapp') selected @endif>Instagram</option>
+                                    <option value="whatsapp" @if($option->key == 'whatsapp') selected @endif>Whatsapp</option>
                                     <option value="telegram" @if($option->key == 'telegram') selected @endif>Telegram</option>
                                 </select>
                                 @if($errors->has('key'))
