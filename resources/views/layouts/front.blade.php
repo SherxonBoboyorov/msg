@@ -68,43 +68,43 @@
         <div class="header-content mx-auto max-w-screen-xl flex items-center justify-between ">
           <div class="home-link nav-link w-fit ">
             <a href="{{ route('/') }}" class="text-[16px] font-[600] uppercase">
-              Main Menu
+              @lang('main.home')
             </a>
           </div>
           <div class="services-link nav-link w-fit ">
             <div class="text-[16px] font-[600] div uppercase">
-              Services
+              @lang('main.services')
             </div>
             <div class="dropdown">
-              <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-              <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-              <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-              <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+              <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.treatment_in_germany')</a>
+              <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.diseases_diagnostics')</a>
+              <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.information_for_patients')</a>
+              <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.trainings_for_medical_personnel')</a>
             </div>
           </div>
           <div class="cooperations-link nav-link w-fit">
             <div class="text-[16px] font-[600] div uppercase">
-              Cooperations
+              @lang('main.cooperations')
             </div>
             <div class="dropdown">
-              <a href="{{ route('partners') }}"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-              <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+              <a href="{{ route('partners') }}"  class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_partners')</a>
+              <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.offer_cooperation')</a>
             </div>
           </div>
           <div class="about-link nav-link w-fit">
             <div class="text-[16px] font-[600] div uppercase">
-              About Us
+              @lang('main.about_us')
             </div>
 
             <div class="dropdown">
-              <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Our team and goals</a>
-              <a href="{{ route('documents', ['id' => 1]) }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">Documents</a>
-              <a href="{{ route('faq') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">FAQ</a>
+              <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.our_team_and_goals')</a>
+              <a href="{{ route('documents', ['id' => 1]) }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.documents')</a>
+              <a href="{{ route('faq') }}" class="text-[16px] font-[600] uppercase hover:text-cred transition-all duration-300">@lang('main.faq')</a>
             </div>
           </div>
           <div class="contacts-link nav-link w-fit">
             <a href="{{ route('contacts') }}" class="text-[16px] font-[600] uppercase">
-              Contacts
+              @lang('main.contacts')
             </a>
           </div>
         </div>
@@ -131,12 +131,12 @@
           <div id="link-wrapper" class="links w-full">
             <div class="home-link nav-link nav-link-responsive w-fit">
               <a href="{{ route('/') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">
-                Main Menu
+                @lang('main.home')
               </a>
             </div>
             <div class="services-link nav-link nav-link-responsive width-full">
               <div id="services-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">
-                Services
+                @lang('main.services')
 
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="group-hover:fill-cred transition-all duration-300">
                   <path
@@ -144,28 +144,28 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Treatment in Germany</a>
-                <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Diseases / Diagnostics</a>
-                <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Information for patients</a>
-                <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Trainings for medical personnel</a>
+                <a href="{{ route('treatment') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.treatment_in_germany')</a>
+                <a href="{{ route('diagnostics') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.diseases_diagnostics')</a>
+                <a href="{{ route('information') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.information_for_patients')</a>
+                <a href="{{ route('doctor') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.trainings_for_medical_personnel')</a>
               </div>
             </div>
             <div class="cooperations-link nav-link nav-link-responsive width-full">
               <div id="cooperations-dropdown"
                 class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">
-                Cooperations
+                @lang('main.cooperations')
 
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="group-hover:fill-cred transition-all duration-300">
                   <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('partners') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our partners</a>
-                <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Offer cooperation</a>
+                <a href="{{ route('partners') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_partners')</a>
+                <a href="{{ route('offer') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.offer_cooperation')</a>
               </div>
             </div>
             <div class="about-link nav-link nav-link-responsive width-full">
-              <div id="about-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase"> About Us
+              <div id="about-dropdown" class="text-[16px] head font-[600] cursor-pointer flex justify-between hover:text-cred transition-all duration-300 items-center group uppercase">@lang('main.about_us')
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                   class="group-hover:fill-cred transition-all duration-300 ">
                   <path
@@ -173,14 +173,14 @@
                 </svg>
               </div>
               <div class="dropdown hidden">
-                <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Our team and goals</a>
-                <a href="{{ route('documents',['id' => 1]) }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">Documents</a>
-                <a href="{{ route('faq') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">FAQ</a>
+                <a href="{{ route('ourTeam') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.our_team_and_goals')</a>
+                <a href="{{ route('documents',['id' => 1]) }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.documents')</a>
+                <a href="{{ route('faq') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">@lang('main.faq')</a>
               </div>
             </div>
             <div class="contacts-link nav-link nav-link-responsive w-fit">
               <a href="{{ route('contacts') }}" class="text-[16px] font-[600] hover:text-cred transition-all duration-300 uppercase">
-                Contacts
+                @lang('main.contacts')
               </a>
             </div>
           </div>
@@ -219,21 +219,21 @@
        class="text-block flex py-8 items-center bg-white px-10 [@media(min-width:800px)]:w-1/2 [@media(min-width:800px)]:h-full [@media(max-width:800px)]:w-full [@media(max-width:800px)]:h-fit [@media(max-width:800px)]:order-1">
        <div class="text-content max-w-[600px] overflow-hidden">
          <div class="title text-[40px]  font-[700] max-sm:text-[32px] uppercase">
-           our Contacts
+           @lang('main.our_contacts')
          </div>
 
          <div class="text-content my-3">
-           <div class="key text-cred text-[14px] font-[400]">Phone number</div>
+           <div class="key text-cred text-[14px] font-[400]">@lang('main.phone_number')</div>
            <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a>
          </div>
          <div class="text-content my-3">
-           <div class="key text-cred text-[14px] font-[400]">Address</div>
+           <div class="key text-cred text-[14px] font-[400]">@lang('main.address')</div>
            <a class="value text-[16px] font-[600]">
             {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
             </a>
          </div>
          <div class="text-content my-3">
-           <div class="key text-cred text-[14px] font-[400]">Email</div>
+           <div class="key text-cred text-[14px] font-[400]">@lang('main.email')</div>
            <a href="mailto:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a>
          </div>
        </div>
@@ -249,9 +249,9 @@
           </a>
           <div class="text-content sm:pl-16 w-full flex justify-between items-start">
             <div class="text-block opacity-[0.6] mr-5">
-              <div class="text text-[16px] text-white mb-3">Terms of service</div>
-              <div class="text text-[16px] text-white mb-3">Data protection</div>
-              <div class="text text-[16px] text-white mb-3">Imprint</div>
+              <div class="text text-[16px] text-white mb-3">@lang('main.terms_of_service')</div>
+              <div class="text text-[16px] text-white mb-3">@lang('main.data_protection')</div>
+              <div class="text text-[16px] text-white mb-3">@lang('main.imprint')</div>
             </div>
             <div class="text-block ">
               <a href="{{ $options->where('key', 'footer')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
@@ -260,7 +260,7 @@
                     <path  d="M15.8337 3.3335H4.16699C3.50395 3.3335 2.86807 3.59689 2.39923 4.06573C1.93038 4.53457 1.66699 5.17045 1.66699 5.8335V14.1668C1.66699 14.8299 1.93038 15.4658 2.39923 15.9346C2.86807 16.4034 3.50395 16.6668 4.16699 16.6668H15.8337C16.4967 16.6668 17.1326 16.4034 17.6014 15.9346C18.0703 15.4658 18.3337 14.8299 18.3337 14.1668V5.8335C18.3337 5.17045 18.0703 4.53457 17.6014 4.06573C17.1326 3.59689 16.4967 3.3335 15.8337 3.3335ZM15.8337 5.00016L10.417 8.72516C10.2903 8.7983 10.1466 8.83681 10.0003 8.83681C9.85404 8.83681 9.71034 8.7983 9.58366 8.72516L4.16699 5.00016H15.8337Z" fill="white" />
                   </svg>
                 </div>
-                Email
+                @lang('main.email')
               </a>
               <a href="{{ $options->where('key', 'whatsapp')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
                 <div class="p-1.5 w-[30px] h-[30px] overflow-hidden rounded-full bg-[#25D366] mr-2">
@@ -292,10 +292,10 @@
         <div class="bottom-footer px-4 py-5 border-t border-[#616161] w-full mx-auto">
           <div class="text-content max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
             <a class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
-              “Medical service in Germany” All rights reserved
+              @lang('main.all_rights_reserved')
             </a>
             <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
-              © Copyright 2023 - SOS Group
+              © Copyright {{ date('Y') }} - SOS Group
             </a>
           </div>
         </div>

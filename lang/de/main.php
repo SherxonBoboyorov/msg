@@ -1,7 +1,43 @@
 <?php
 
-//Uzbek
+//Dutch
 
 return [
-   //
+   'home' => 'Hoofdmenu',
+   'services' => 'Diensten',
+   'treatment_in_germany' => 'Behandeling in Duitsland',
+   'diseases_diagnostics' => 'Ziekten / Diagnostiek',
+   'information_for_patients' => 'Informatie voor patiënten',
+   'trainings_for_medical_personnel' => 'Opleidingen voor medisch personeel',
+   'cooperations' => 'Samenwerkingen',
+   'our_partners' => 'Onze partners',
+   'offer_cooperation' => 'Bied samenwerking aan',
+   'about_us' => 'Over ons',
+   'our_team_and_goals' => 'Ons team en onze doelstellingen',
+   'documents' => 'Documenten',
+   'faq' => 'FAQ',
+   'contacts' => 'Contacten',
+   'our_contacts' => 'Onze Contacten',
+   'phone_number' => 'Telefoonnummer',
+   'address' => 'Adres',
+   'email' => 'E-mail',
+   'terms_of_service' => 'Servicevoorwaarden',
+   'data_protection' => 'Gegevensbescherming',
+   'imprint' => 'Afdruk',
+   'all_rights_reserved' => '“Medische dienst in Duitsland” Alle rechten voorbehouden',
+   'about_company' => 'Over bedrijf',
+   'read_more' => 'Lees verder',
+   'more' => 'Meer',
+   'contact_us' => 'Neem contact met ons op',
+   'ipload_the_medical_reports' => 'Upload de medische rapporten',
+   'name_and_surname' => 'Naam en achternaam',
+   'your_message' => 'Jouw bericht',
+   'i_have_read' => 'Ik heb de gelezen',
+   'privacy_policy' => 'Privacybeleid',
+   'and_agree_following' => 'en ga akkoord met het volgende',
+   'collection_of_personal_policy' => 'Beleid voor het verzamelen van persoonlijke gegevens*',
+   'yes' => 'Ja',
+   'authorization_for_third_parties' => 'Autorisatie voor derden',
+   'no' => 'Nee',
+   'send' => 'Verzenden'
 ];
