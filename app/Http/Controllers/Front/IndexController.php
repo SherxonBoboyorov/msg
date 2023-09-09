@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CreateFile;
 use App\Models\Callback;
+use App\Models\Company;
 use App\Models\Page;
 use App\Models\Slider;
 use Illuminate\Http\RedirectResponse;
@@ -15,11 +16,11 @@ class IndexController extends Controller
     public function homepage()
     {
         $sliders = Slider::orderBy('created_at', 'DESC')->get();
-        $pages = Page::all();
+        $companies = Company::all();
 
         return view('front.index', compact(
             'sliders',
-            'pages'
+            'companies'
         ));
     }
 

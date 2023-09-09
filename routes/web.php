@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\OptionsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\PatientController;
+use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Front\ContactsController;
@@ -58,7 +59,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'category' => CategoryController::class,
         'document' => DocumentController::class,
         'options' => OptionsController::class,
-        'company' => CompanyController::class
+        'company' => CompanyController::class,
+        'feedback' => ResultController::class
     ]);
 });
 
@@ -80,7 +82,8 @@ Route::group(
         Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
-        Route::post('save_callback', [IndexController::class, 'saveCallback'])->name('saveCallback');
+        Route::post('saveCallback', [IndexController::class, 'saveCallback'])->name('saveCallback');
+        Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         
  });
 

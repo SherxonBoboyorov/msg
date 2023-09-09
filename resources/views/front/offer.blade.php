@@ -18,45 +18,49 @@
     </div>
     <!-- back-img end -->
 
+    @include('alert')
+
     <!-- main start -->
     <div class="main w-full mx-auto px-3 pb-6">
       <div class="main-content mx-auto max-w-screen-xl  py-7 sm:py-16">
         <div class="form w-full mx-auto h-fit">
           <div class="form-content mx-auto w-full">
-            <form action="http://uybozorim.sosgroup.uz/uz/save_callback" class="my-3">
+            <form action="{{ route('youSave') }}" class="my-3" method="POST">
+              @csrf
               <div class="input-content">
-                <input required type="text"
+                <input required type="text" name="names"
                   class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                  placeholder="Name and surname">
-                <input required type="text"
+                  placeholder="@lang('main.name_and_surname')">
+                <input required type="text" name="hospital_names"
                   class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                  placeholder="Company / hospital">
-                <input required type="number"
+                  placeholder="@lang('main.hospital')">
+                <input required type="text" name="phone"
                   class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                  placeholder="Phone number">
-                <input required type="email"
+                  placeholder="@lang('main.phone_number')">
+                <input required type="email" name="email"
                   class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                  placeholder="Email">
-                <textarea required type="number" rows="4"
+                  placeholder="@lang('main.email')">
+                <textarea required type="text" name="content" rows="4"
                   class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                   placeholder="What kind of cooperation would you like to offer?"></textarea>
               </div>
+
               <div class="privacy-policy flex justify-between items-start">
                 <div class="text text-[15px] text-black mr-[60px]">
-                  I have read the <span class="text-cred font-[700]">Privacy Policy</span> and agree to the following
-                  <span class="text-cred font-[700]">Collection of Personal Data Policy* </span>
+                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
+                  <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
                 </div>
                 <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                   <div class="form-group ">
-                    <input type="checkbox" id="privacy-yes" />
-                    <label for="privacy-yes">Yes</label>
+                    <input type="checkbox" id="privacy-yes" translate="no"/>
+                    <label for="privacy-yes">@lang('main.yes')</label>
                   </div>
                 </div>
               </div>
               <div class="button-content mt-7 w-full flex items-center">
                 <button id="submitFormBtn" type="submit" disabled
                   class="border-none rounded-md disabled:opacity-[0.7] text-[12px] font-[600] bg-cyellow uppercase py-3 px-7">
-                  Send </button>
+                  @lang('main.send') </button>
               </div>
             </form>
           </div>

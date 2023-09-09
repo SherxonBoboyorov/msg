@@ -29,7 +29,7 @@
       </div>
 
       <div class="what-we-do h-fit max-w-screen-xl px-4 mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20">
-        @foreach($pages as $page)
+        @foreach($companies as $company)
         <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
           <div class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center">
             <div class="text-content">
@@ -38,7 +38,7 @@
               </div>
 
               <div class="mt-5 mb-7 decription max-h-[340px] text-[16px] max-sm:text-[14px] overflow-hidden">
-                 {!! $page->{'sub_content_' . app()->getLocale()} !!} 
+                 {!! $company->{'content_' . app()->getLocale()} !!} 
               </div>
 
               <a class="uppercase bg-cyellow px-5 py-3 rounded-lg text-[14px] max-sm:text-[15px] font-[500]">
@@ -48,7 +48,7 @@
           </div>
 
           <div class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]">
-            <img src="{{ asset($page->icon) }}" alt="" class="w-full h-full object-cover" />
+            <img src="{{ asset($company->image) }}" alt="" class="w-full h-full object-cover" />
           </div>
         </div>
         @endforeach
@@ -150,7 +150,7 @@
       @include('alert')
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form action="{{ route('saveCallback') }}" method="POST" class="my-3">
+          <form action="{{ route('saveCallback') }}"  class="my-3" method="POST">
             @csrf
             <div class="input-content">
               <input name="fio" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
