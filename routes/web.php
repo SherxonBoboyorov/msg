@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\ContentController;
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
@@ -56,7 +57,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'content' => ContentController::class,
         'category' => CategoryController::class,
         'document' => DocumentController::class,
-        'options' => OptionsController::class
+        'options' => OptionsController::class,
+        'company' => CompanyController::class
     ]);
 });
 
@@ -78,7 +80,7 @@ Route::group(
         Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
-
+        Route::post('save_callback', [IndexController::class, 'saveCallback'])->name('saveCallback');
         
  });
 

@@ -141,22 +141,26 @@
         </div>
       </div>
 
+
       <div class="form px-4 md:pt-16 max-md:pt-10 md:pb-20 max-md:pb-14  w-full mx-auto h-fit bg-cover bg-no-repeat" style="background-image: url('{{ asset('front/src/public/images/contact-back-img.png') }}')">
         <div class="title text-[40px] text-center font-[700] max-sm:text-[32px]">
           @lang('main.contact_us')
         </div>
 
+      @include('alert')
+
         <div class="form-content mx-auto max-w-screen-md">
-          <form action="http://uybozorim.sosgroup.uz/uz/save_callback" class="my-3">
+          <form action="{{ route('saveCallback') }}" method="POST" class="my-3">
+            @csrf
             <div class="input-content">
-              <input required type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')">
-              <input required type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')">
-              <input required type="number" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')">
-              <textarea required type="number" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"></textarea>
+              <input name="fio" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
+              <input name="email" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
+              <input name="phone" type="text" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')" required>
+              <textarea name="content" type="text" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"required></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full">
-              <input type="file" name="video" class="hidden" onchange="takeFileName(event)" id="file">
-              <label id="fileLabel" for="file" class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase">
+              <input name="image" type="file" class="hidden" onchange="takeFileName(event)" id="file">
+              <label id="fileLabel" for="file" class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase" required>
                 @lang('main.ipload_the_medical_reports')
               </label>
             </div>
@@ -167,7 +171,7 @@
               </div>
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
-                  <input type="checkbox" id="privacy-yes" />
+                  <input type="checkbox" id="privacy-yes" translate="no"/>
                   <label for="privacy-yes">@lang('main.yes')</label>
                 </div>
               </div>

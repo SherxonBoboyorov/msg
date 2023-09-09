@@ -47,13 +47,24 @@
                   </li>
                 {{-- end  --}}
 
+                {{-- start  --}}
+                <li class="nav-item">
+                    <a href="{{ route('company.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-building"></i>
+                    <p>
+                        About Compnay
+                    </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
 
                 {{-- start  --}}
                 <li class="nav-item">
                     <a href="{{ route('page.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-building"></i>
+                    <i class="nav-icon fas fa-medkit"></i>
                     <p>
-                        About Company
+                        Treatment in Germany
                     </p>
                     </a>
                  </li>
