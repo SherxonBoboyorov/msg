@@ -223,6 +223,7 @@
     </div>
     <!-- back-img end -->
 
+    @include('alert')
     <!-- main start -->
     <div class="main w-full mx-auto px-3">
       <div class="main-content mx-auto max-w-screen-xl py-7 sm:py-16 flex justify-between flex-wrap">
@@ -251,61 +252,61 @@
             @lang('main.make_a_request')
           </div>
 
-          <form action="http://uybozorim.sosgroup.uz/uz/save_callback" class="my-3">
+          <form action="{{ route('saveCallback') }}" class="my-3" method="POST">
+            @csrf
             <div class="input-content">
-              <input required type="text"
+              <input required type="text" name="fio"
                 class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                placeholder="Name and surname">
-              <input required type="email"
+                placeholder="@lang('main.name_and_surname')">
+              <input required type="email" name="email"
                 class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                placeholder="Email">
-              <input required type="number"
+                placeholder="@lang('main.email')">
+              <input required type="text" name="phone"
                 class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                placeholder="Phone number">
-              <textarea required type="number" rows="4"
+                placeholder="@lang('main.phone_number')">
+              <textarea required type="text" name="content" rows="4"
                 class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                placeholder="Your message"></textarea>
+                placeholder="@lang('main.your_message')"></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full">
-              <input type="file" name="video" class="hidden" onchange="takeFileName(event)" id="file">
+              <input type="file" name="image" class="hidden" onchange="takeFileName(event)" id="file">
               <label id="fileLabel" for="file"
                 class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase">
-                Upload the medical reports
+                @lang('main.ipload_the_medical_reports')
               </label>
             </div>
             <div class="privacy-policy flex justify-between items-start">
               <div class="text text-[15px] text-black mr-[60px]">
-                I have read the <span class="text-cred font-[700]">Privacy Policy</span> and agree to the
-                following
-                <span class="text-cred font-[700]">Collection of Personal Data Policy* </span>
+                @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
+                <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
               </div>
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
                   <input type="checkbox" id="privacy-yes" />
-                  <label for="privacy-yes">Yes</label>
+                  <label for="privacy-yes">@lang('main.yes')</label>
                 </div>
               </div>
             </div>
             <div class="auth mt-3 flex justify-between items-start flex-wrap  ">
               <div class="text text-[17px] text-black [@media(max-width:576px)]:w-full mb-2">
-                Authorization for third parties<span class="text-cred">*</span>
+                @lang('main.authorization_for_third_parties')<span class="text-cred">*</span>
               </div>
               <div class="radio-buttons [@media(max-width:576px)]:ml-[38px] mr-2 flex w-[120px] justify-between">
                 <div class="form-group">
                   <input type="radio" id="yes" name="boolen" checked />
-                  <label for="yes">Yes</label>
+                  <label for="yes">@lang('main.yes')</label>
                 </div>
 
                 <div class="form-group">
                   <input type="radio" id="female" name="boolen" />
-                  <label for="female">No</label>
+                  <label for="female">@lang('main.no')</label>
                 </div>
               </div>
             </div>
             <div class="button-content mt-7 w-full flex items-center">
               <button id="submitFormBtn" type="submit" disabled
                 class="border-none rounded-md disabled:opacity-[0.7] text-[12px] font-[600] bg-cyellow uppercase py-3 px-7">
-                Send </button>
+                @lang('main.send') </button>
             </div>
           </form>
         </div>

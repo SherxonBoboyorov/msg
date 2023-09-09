@@ -18,33 +18,33 @@
     <!-- back-img end -->
 
     <!-- main start -->
-    <div class="main w-full mx-auto px-3 pb-6 ">
-      @foreach($pages as $page)
-        
+    <div class="main w-full mx-auto px-3 pb-4">
       <div class="main-content mx-auto max-w-screen-xl  py-7 sm:py-16">
-        <div class="text-content">
-          {!! $page->{'content_' . app()->getLocale()} !!}
-        </div>
+        @foreach($pages as $page)
+        <div class="h-fit max-w-screen-xl px-4 mx-auto  ">
+          <div class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit">
+            <div class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center">
+              <div class="text-content">
+                <div class=" mb-7 decription max-h-[500px] text-[16px] max-sm:text-[14px] overflow-hidden">
+                 {!! $page->{'sub_content_' . app()->getLocale()} !!}
+                </div>
+              </div>
+            </div>
 
-        <!-- video start -->
-        {{-- <div id="videoWrapper"
-          class="back-video w-full mx-auto max-sm:h-[300px] sm:h-[400px] md:h-[500px]  cursor-pointer mt-10 relative">
-          <div class="video-play-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="max-sm:w-[30px] max-sm:h-[30px] w-[40px] h-[40px]"
-              viewBox="0 0 60 60" fill="none">
-              <circle cx="30" cy="30" r="30" fill="white" />
-              <path d="M38 30L26 36.9282L26 23.0718L38 30Z" fill="#D60000" />
-            </svg>
+            <div class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]">
+              <img src="{{ asset($page->image) }}" alt="" class="w-full h-full object-cover" />
+            </div>
+
           </div>
-          <a data-fancybox href="./src/public/videos/video.mp4" class="w-full h-full">
-            <img id="videoImg" class="w-full h-full object-cover" src="./src/public/images/video-img.png" />
-          </a>
-        </div> --}}
-        <!-- video end -->
-
+        </div>
+        <div class="text-content my-6">
+          <div class=" mb-7 decription max-h-[500px] text-[16px] max-sm:text-[14px] overflow-hidden">
+            {!! $page->{'content_' . app()->getLocale()} !!}
+          </div>
+        </div>
+        @endforeach
+        <!-- main end -->
       </div>
-      @endforeach
     </div>
-    <!-- main end -->
 
     @endsection

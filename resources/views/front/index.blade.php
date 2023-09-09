@@ -150,7 +150,7 @@
       @include('alert')
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form action="{{ route('saveCallback') }}"  class="my-3" method="POST">
+          <form action="{{ route('saveCallback') }}" class="my-3" method="POST">
             @csrf
             <div class="input-content">
               <input name="fio" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>

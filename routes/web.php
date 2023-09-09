@@ -84,6 +84,8 @@ Route::group(
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
         Route::post('saveCallback', [IndexController::class, 'saveCallback'])->name('saveCallback');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
+        Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
+
         
  });
 

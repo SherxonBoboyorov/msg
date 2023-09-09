@@ -24,12 +24,14 @@ class IndexController extends Controller
         ));
     }
 
-    
+
     public function saveCallback(CreateFile $request)
     {
         $data = $request->all();
 
+        // dd($request);
         $data['image'] = Callback::uploadImage($request);
+
 
         if (Callback::create($data)) {
            return back()->with('message', 'Your application has been successfully sent');
