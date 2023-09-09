@@ -82,7 +82,7 @@ Route::group(
         Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
-        Route::post('saveCallback', [IndexController::class, 'saveCallback'])->name('saveCallback');
+        Route::post('callback', [IndexController::class, 'callback'])->name('callback');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
 
