@@ -132,7 +132,6 @@ const servicesLink = document.querySelectorAll(".services-link");
 const cooperationsLink = document.querySelectorAll(".cooperations-link");
 const aboutLink = document.querySelectorAll(".about-link");
 const contactsLink = document.querySelectorAll(".contacts-link");
-console.log(contactsLink[1]);
 
 const linksData = {
   forHome: [
@@ -192,17 +191,29 @@ const linksData = {
     "/en/information.html",
     "/de/information.html",
 
-    "/trainings",
-    "/uz/trainings",
-    "/ru/trainings",
-    "/en/trainings",
-    "/de/trainings",
+    "/nurse",
+    "/uz/nurse",
+    "/ru/nurse",
+    "/en/nurse",
+    "/de/nurse",
 
-    "/trainings.html",
-    "/uz/trainings.html",
-    "/ru/trainings.html",
-    "/en/trainings.html",
-    "/de/trainings.html",
+    "/doctor",
+    "/uz/doctor",
+    "/ru/doctor",
+    "/en/doctor",
+    "/de/doctor",
+
+    "/doctor.html",
+    "/uz/doctor.html",
+    "/ru/doctor.html",
+    "/en/doctor.html",
+    "/de/doctor.html",
+
+    "/nurse.html",
+    "/uz/nurse.html",
+    "/ru/nurse.html",
+    "/en/nurse.html",
+    "/de/nurse.html",
   ],
 
   forCooperations: [
@@ -232,29 +243,29 @@ const linksData = {
   ],
 
   forAbout: [
-    "/team",
-    "/uz/team",
-    "/ru/team",
-    "/en/team",
-    "/de/team",
+    "/ourTeam",
+    "/uz/ourTeam",
+    "/ru/ourTeam",
+    "/en/ourTeam",
+    "/de/ourTeam",
 
-    "/team.html",
-    "/uz/team.html",
-    "/ru/team.html",
-    "/en/team.html",
-    "/de/team.html",
+    "/ourTeam.html",
+    "/uz/ourTeam.html",
+    "/ru/ourTeam.html",
+    "/en/ourTeam.html",
+    "/de/ourTeam.html",
 
-    "/documents",
-    "/uz/documents",
-    "/ru/documents",
-    "/en/documents",
-    "/de/documents",
+    "/documents/1",
+    "/uz/documents/1",
+    "/ru/documents/1",
+    "/en/documents/1",
+    "/de/documents/1",
 
-    "/documents.html",
-    "/uz/documents.html",
-    "/ru/documents.html",
-    "/en/documents.html",
-    "/de/documents.html",
+    "/documents/1.html",
+    "/uz/documents/1.html",
+    "/ru/documents/1.html",
+    "/en/documents/1.html",
+    "/de/documents/1.html",
 
     "/faq",
     "/uz/faq",
@@ -282,6 +293,7 @@ const linksData = {
     "/en/contacts.html",
     "/de/contacts.html",
   ],
+
 };
 
 function checkAvtiveLink(arr, link) {

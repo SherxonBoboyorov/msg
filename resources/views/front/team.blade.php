@@ -55,7 +55,7 @@
               <div class="text-content md:w-[80%] sm:w-[68%] max-sm:w-full max-sm:mt-3 flex items-center">
                 <div class="text-body max-sm:text-center  h-fit w-full">
                   <div class="title text-[20px] font-[600] w-full truncate">{{ $team->{'name_' . app()->getLocale()} }}</div>
-                  <div class="description my-1 text-[16px] max-h-[75px] overflow-hidden">
+                  <div class="description my-1 text-[16px] max-h-[240px] overflow-hidden">
                     {!! $team->{'content_' . app()->getLocale()} !!}
                   </div>
                   <div class="phone-number max-sm:mx-auto w-fit flex items-center">
