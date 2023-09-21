@@ -29,7 +29,7 @@
 
         <div class="cards mt-6 mb-3">
           @foreach($diagnostics as $diagnostic)
-          <div class="card p-7 max-sm:p-5 rounded-md shadow-[0_2px_14px_0_rgba(0,0,0,0.10)]">
+          <div class="card p-7 max-sm:p-5 rounded-md shadow-[0_2px_14px_0_rgba(0,0,0,0.10)]" style="margin-bottom: 30px">
             <div class="title w-fit flex items-center">
               <div class="w-[40px] h-[40px] max-sm:w-[30px] max-sm:h-[30px] mr-3 truncate">
                 <img src="{{ asset($diagnostic->image) }}" class="w-full h-full" alt="">
