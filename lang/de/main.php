@@ -43,6 +43,7 @@ return [
    'for_doctors' => 'Voor artsen',
    'for_nurses' => 'Voor verpleegkundigen',
    'make_a_request' => 'Een verzoek doen',
-   'hospital' => 'Bedrijf / ziekenhuis'
+   'hospital' => 'Bedrijf / ziekenhuis',
+   'about' => 'Over' 
 
 ];

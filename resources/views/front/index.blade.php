@@ -41,7 +41,7 @@
                  {!! $company->{'content_' . app()->getLocale()} !!} 
               </div>
 
-              <a class="uppercase bg-cyellow px-5 py-3 rounded-lg text-[14px] max-sm:text-[15px] font-[500]">
+              <a href="{{ route('about') }}" class="uppercase bg-cyellow px-5 py-3 rounded-lg text-[14px] max-sm:text-[15px] font-[500]">
                 @lang('main.read_more')
               </a>
             </div>

@@ -132,6 +132,9 @@ const servicesLink = document.querySelectorAll(".services-link");
 const cooperationsLink = document.querySelectorAll(".cooperations-link");
 const aboutLink = document.querySelectorAll(".about-link");
 const contactsLink = document.querySelectorAll(".contacts-link");
+const langEn = document.querySelectorAll(".langEN");
+const langRu = document.querySelectorAll(".langRU");
+const langDe = document.querySelectorAll(".langDE");
 
 const linksData = {
   forHome: [
@@ -191,11 +194,17 @@ const linksData = {
     "/en/information.html",
     "/de/information.html",
 
-    "/nurse",
-    "/uz/nurse",
-    "/ru/nurse",
-    "/en/nurse",
-    "/de/nurse",
+    "/trainings",
+    "/uz/trainings",
+    "/ru/trainings",
+    "/en/trainings",
+    "/de/trainings",
+
+    "/trainings.html",
+    "/uz/trainings.html",
+    "/ru/trainings.html",
+    "/en/trainings.html",
+    "/de/trainings.html",
 
     "/doctor",
     "/uz/doctor",
@@ -208,6 +217,12 @@ const linksData = {
     "/ru/doctor.html",
     "/en/doctor.html",
     "/de/doctor.html",
+
+    "/nurse",
+    "/uz/nurse",
+    "/ru/nurse",
+    "/en/nurse",
+    "/de/nurse",
 
     "/nurse.html",
     "/uz/nurse.html",
@@ -278,6 +293,18 @@ const linksData = {
     "/ru/faq.html",
     "/en/faq.html",
     "/de/faq.html",
+
+    "/about",
+    "/uz/about",
+    "/ru/about",
+    "/en/about",
+    "/de/about",
+
+    "/about.html",
+    "/uz/about.html",
+    "/ru/about.html",
+    "/en/about.html",
+    "/de/about.html",
   ],
 
   forContacts: [
@@ -293,7 +320,6 @@ const linksData = {
     "/en/contacts.html",
     "/de/contacts.html",
   ],
-
 };
 
 function checkAvtiveLink(arr, link) {
@@ -305,10 +331,18 @@ function checkAvtiveLink(arr, link) {
   }
 }
 
+function activeLang(id) {
+  if (loc.slice(1, 3) == "en") langEn[id].classList.add("active");
+  else if (loc.slice(1, 3) == "ru") langRu[id].classList.add("active");
+  else if (loc.slice(1, 3) == "de") langDe[id].classList.add("active");
+  else langDe[id].classList.add("active");
+}
+
 for (let i = 0; i < 2; i++) {
   checkAvtiveLink(linksData.forHome, homeLink?.[i]);
   checkAvtiveLink(linksData.forServices, servicesLink?.[i]);
   checkAvtiveLink(linksData.forCooperations, cooperationsLink?.[i]);
   checkAvtiveLink(linksData.forAbout, aboutLink?.[i]);
   checkAvtiveLink(linksData.forContacts, contactsLink?.[i]);
+  activeLang(i);
 }

@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ContactsController;
 use App\Http\Controllers\Front\DiagnosticsController;
 use App\Http\Controllers\Front\DucumentsController;
@@ -85,10 +86,9 @@ Route::group(
         Route::post('callback', [IndexController::class, 'callback'])->name('callback');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
+        Route::get('about', [AboutController::class, 'about'])->name('about');
 
-        
  });
-
 
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

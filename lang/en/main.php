@@ -43,5 +43,6 @@ return [
    'for_doctors' => 'For Doctors',
    'for_nurses' => 'For Nurses',
    'make_a_request' => 'Make a request',
-   'hospital' => 'Company / hospital'
+   'hospital' => 'Company / hospital',
+   'about' => 'About'
 ];
