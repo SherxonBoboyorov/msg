@@ -15,7 +15,7 @@ return [
    'about_us' => 'About Us',
    'our_team_and_goals' => 'Our team and goals',
    'documents' => 'Documents',
-   'faq' => 'FAQ',
+   'faq' => 'FAQs',
    'contacts' => 'Contacts',
    'our_contacts' => 'Our Contacts',
    'phone_number' => 'Phone number',

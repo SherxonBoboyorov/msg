@@ -29,6 +29,8 @@ class IndexController extends Controller
 
         $data['image'] = Callback::uploadImage($request);
 
+        dd($request->all());
+
         if (Callback::create($data)) {
            return back()->with('message', 'Your application has been successfully sent');
         }

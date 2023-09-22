@@ -226,17 +226,25 @@
 
          <div class="text-content my-3">
            <div class="key text-cred text-[14px] font-[400]">@lang('main.phone_number')</div>
-           <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a>
+           <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a><br>
+           <a href="tel:{{ $options->where('key', 'phone1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone1')->first()->value }}</a><br>
+           <a href="tel:{{ $options->where('key', 'phone2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone2')->first()->value }}</a>
          </div>
          <div class="text-content my-3">
            <div class="key text-cred text-[14px] font-[400]">@lang('main.address')</div>
            <a class="value text-[16px] font-[600]">
-            {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
-            </a>
+              {{ $options->where('key', 'address_' . app()->getLocale())->first()->value }}
+           </a><br><a class="value text-[16px] font-[600]">
+              {{ $options->where('key', 'address1_' . app()->getLocale())->first()->value }}
+           </a><br><a class="value text-[16px] font-[600]">
+              {{ $options->where('key', 'address2_' . app()->getLocale())->first()->value }}
+           </a>
          </div>
          <div class="text-content my-3">
            <div class="key text-cred text-[14px] font-[400]">@lang('main.email')</div>
-           <a href="mailto:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a>
+           <a href="mailto:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a><br>
+           <a href="mailto:{{ $options->where('key', 'phone1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone1')->first()->value }}</a><br>
+           <a href="mailto:{{ $options->where('key', 'phone2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone2')->first()->value }}</a>
          </div>
        </div>
      </div>

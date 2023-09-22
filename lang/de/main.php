@@ -3,20 +3,20 @@
 //Dutch
 
 return [
-   'home' => 'Hoofdmenu',
-   'services' => 'Diensten',
-   'treatment_in_germany' => 'Behandeling in Duitsland',
-   'diseases_diagnostics' => 'Ziekten / Diagnostiek',
-   'information_for_patients' => 'Informatie voor patiënten',
-   'trainings_for_medical_personnel' => 'Opleidingen voor medisch personeel',
-   'cooperations' => 'Samenwerkingen',
-   'our_partners' => 'Onze partners',
-   'offer_cooperation' => 'Bied samenwerking aan',
-   'about_us' => 'Over ons',
-   'our_team_and_goals' => 'Ons team en onze doelstellingen',
-   'documents' => 'Documenten',
-   'faq' => 'FAQ',
-   'contacts' => 'Contacten',
+   'home' => 'Startseite',
+   'services' => 'Dienstleistungen',
+   'treatment_in_germany' => 'Behandlung in Deutschland',
+   'diseases_diagnostics' => 'Krankheiten/ Diagnostik',
+   'information_for_patients' => 'Informationen für Patienten',
+   'trainings_for_medical_personnel' => 'Fortbildungen für medizinisches Persona',
+   'cooperations' => 'Zusammenarbeit',
+   'our_partners' => 'Unsere Partner',
+   'offer_cooperation' => 'Kooperation anbieten',
+   'about_us' => 'Über Uns',
+   'our_team_and_goals' => 'Unser Team und Ziele',
+   'documents' => 'Unterlagen',
+   'faq' => 'FAQs',
+   'contacts' => 'Kontakte',
    'our_contacts' => 'Onze Contacten',
    'phone_number' => 'Telefoonnummer',
    'address' => 'Adres',
@@ -44,6 +44,6 @@ return [
    'for_nurses' => 'Voor verpleegkundigen',
    'make_a_request' => 'Een verzoek doen',
    'hospital' => 'Bedrijf / ziekenhuis',
-   'about' => 'Over' 
+   'about' => 'Über' 
 
 ];

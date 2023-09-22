@@ -27,13 +27,26 @@
                                 <label for="key">Key</label>
                                 <select name="key" id="key" class="form-control">
                                     <option value="map" @if($option->key == 'map') selected @endif>Google or Yandex MAP</option>
-                                    <option value="address_de" @if($option->key == 'address_de') selected @endif>Address DE</option>
-                                    <option value="address_en" @if($option->key == 'address_en') selected @endif>Address EN</option>
-                                    <option value="address_ru" @if($option->key == 'address_ru') selected @endif>Address RU</option>
+                                    <option value="address_de" @if($option->key == 'Address DE') selected @endif>Address DE</option>
+                                    <option value="address_en" @if($option->key == 'Address EN') selected @endif>Address EN</option>
+                                    <option value="address_ru" @if($option->key == 'Address RU') selected @endif>Address RU</option>
+
+                                    <option value="address1_de" @if($option->key == 'Address1 DE') selected @endif>Address1 DE</option>
+                                    <option value="address1_en" @if($option->key == 'Address1 EN') selected @endif>Address1 EN</option>
+                                    <option value="address1_ru" @if($option->key == 'Address1 RU') selected @endif>Address1 RU</option>
+
+                                    <option value="address2_de" @if($option->key == 'Address2 DE') selected @endif>Address2 DE</option>
+                                    <option value="address2_en" @if($option->key == 'Address2 EN') selected @endif>Address2 EN</option>
+                                    <option value="address2_ru" @if($option->key == 'Address2 RU') selected @endif>Address2 RU</option>
+
                                     <option value="instagram" @if($option->key == 'instagram') selected @endif>Instagram</option>
                                     <option value="facebook" @if($option->key == 'facebook') selected @endif>Facebook</option>
                                     <option value="phone" @if($option->key == 'phone') selected @endif>Phone</option>
+                                    <option value="phone1" @if($option->key == 'phone1') selected @endif>Phone1</option>
+                                    <option value="phone2" @if($option->key == 'phone2') selected @endif>Phone2</option>
                                     <option value="email" @if($option->key == 'email') selected @endif>E-mail</option>
+                                    <option value="email1" @if($option->key == 'email1') selected @endif>E-mail1</option>
+                                    <option value="email2" @if($option->key == 'email2') selected @endif>E-mail2</option>
                                     <option value="footer" @if($option->key == 'footer') selected @endif>Footer E-mail</option>
                                     <option value="whatsapp" @if($option->key == 'whatsapp') selected @endif>Whatsapp</option>
                                     <option value="telegram" @if($option->key == 'telegram') selected @endif>Telegram</option>
