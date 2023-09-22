@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\ContentController;
+use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\DiagnosticController;
 use App\Http\Controllers\Admin\DiseaseController;
 use App\Http\Controllers\Admin\DoctorController;
@@ -61,7 +62,8 @@ Route::middleware(['role:admin'])->prefix('dashboard')->group(static function ()
         'document' => DocumentController::class,
         'options' => OptionsController::class,
         'company' => CompanyController::class,
-        'feedback' => ResultController::class
+        'feedback' => ResultController::class,
+        'department' => DepartmentController::class
     ]);
 });
 

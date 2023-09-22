@@ -173,6 +173,20 @@
                 {{-- end  --}}
 
 
+                   {{-- start  --}}
+                   <li class="nav-item">
+                    <a href="{{ route('department.index') }}" class="nav-link">
+                        <i class="nav-icon fa-building"></i>
+                     <p>
+                        Department Information
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
+
+
+
                   {{-- start  --}}
                   <li class="nav-item">
                     <a href="{{ route('content.index') }}" class="nav-link">
