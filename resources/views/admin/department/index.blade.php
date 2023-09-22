@@ -34,7 +34,6 @@
                         <thead>
                         <tr>
                             <th style="width: 2%;">#</th>
-                            <th>Image</th>
                             <th>Title [Deutsch]</th>
                             <th>Title [Russian]</th>
                             <th>Title [Engish]</th>
@@ -45,9 +44,6 @@
                         @foreach ($departments as $department)
                             <tr>
                                 <td>{{ $department->id }}</td>
-                                <td>
-                                    <img src="{{ asset($department->image) }}" alt="" width="35" height="35">
-                                </td>
                                 <td>{{ $department->title_de }}</td>
                                 <td>{{ $department->title_en }}</td>
                                 <td>{{ $department->title_ru }}</td>

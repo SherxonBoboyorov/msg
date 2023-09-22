@@ -43,7 +43,7 @@ class DepartmentController extends Controller
         $data = $request->all();
     
         $data['slug_de'] = Str::slug($request->title_de, '-', 'de');
-        $data['slug_uz'] = Str::slug($request->title_en, '-', 'en');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
         $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
 
         if (Department::create($data)) {
@@ -90,13 +90,13 @@ class DepartmentController extends Controller
         $data = $request->all();
 
         $data['slug_de'] = Str::slug($request->title_de, '-', 'de');
-        $data['slug_uz'] = Str::slug($request->title_en, '-', 'en');
+        $data['slug_en'] = Str::slug($request->title_en, '-', 'en');
         $data['slug_ru'] = Str::slug($request->title_ru, '-', 'ru');
 
         if ($department->update($data)) {
-            return redirect()->route('department.index')->with('message', "pdated successfully!!!");
+            return redirect()->route('department.index')->with('message', "updated successfully!!!");
         }
-        return redirect()->route('department.index')->with('message', "Изменено не успешно!!!");
+        return redirect()->route('department.index')->with('message', "failed to update successfully!!!");
     }
 
     /**

@@ -173,16 +173,7 @@
                 {{-- end  --}}
 
 
-                   {{-- start  --}}
-                   <li class="nav-item">
-                    <a href="{{ route('department.index') }}" class="nav-link">
-                        <i class="nav-icon fa-building"></i>
-                     <p>
-                        Department Information
-                     </p>
-                    </a>
-                 </li>
-                {{-- end  --}}
+                 
 
 
 
@@ -231,6 +222,8 @@
                  </li>
                 {{-- end  --}}
 
+
+
                  {{-- start  --}}
                  <li class="nav-item">
                     <a href="{{ route('feedback.index') }}" class="nav-link">
@@ -242,6 +235,20 @@
                  </li>
                 {{-- end  --}}
 
+
+
+                  {{-- start  --}}
+                  <li class="nav-item">
+                    <a href="{{ route('department.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-newspaper"></i>
+                     <p>
+                        Department Information
+                     </p>
+                    </a>
+                 </li>
+                {{-- end  --}}
+
+                
                 </ul>
             </nav>
         </div>
