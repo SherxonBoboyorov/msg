@@ -74,6 +74,8 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
         Route::get('/', [IndexController::class, 'homepage'])->name('/');
+        Route::get('department-informations/', [IndexController::class, 'list'])->name('department-informations');
+        Route::get('department-information/{slug}', [IndexController::class, 'show'])->name('department-informations');
         Route::get('treatment', [TreatmentController::class, 'treatment'])->name('treatment');
         Route::get('diagnostics', [DiagnosticsController::class, 'diagnostics'])->name('diagnostics');
         Route::get('information', [InformationController::class, 'information'])->name('information');
@@ -85,10 +87,13 @@ Route::group(
         Route::get('documents/{id?}', [DucumentsController::class, 'documents'])->name('documents');
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
+        Route::get('department-informations/', [ContactsController::class, 'list'])->name('department-informations');
+        Route::get('department-information/{slug}', [ContactsController::class, 'show'])->name('department-informations');
         Route::post('callback', [IndexController::class, 'callback'])->name('callback');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
         Route::get('about', [AboutController::class, 'about'])->name('about');
+
 
  });
 

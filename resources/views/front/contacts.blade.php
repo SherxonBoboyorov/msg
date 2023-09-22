@@ -343,9 +343,13 @@
       </a>
       <div class="text-content sm:pl-16 w-full flex justify-between items-start">
         <div class="text-block opacity-[0.6] mr-5">
-          <div class="text text-[16px] text-white mb-3">@lang('main.terms_of_service')</div>
-          <div class="text text-[16px] text-white mb-3">@lang('main.data_protection')</div>
-          <div class="text text-[16px] text-white mb-3">@lang('main.imprint')</div>
+          @foreach (\App\Models\Department::orderBy('created_at', 'DESC')->get() as $department)
+          <div class="text text-[16px] text-white mb-3">
+            <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+            {{ $department->{'title_' . app()->getLocale()} }}
+          </a>
+        </div>
+          @endforeach
         </div>
         <div class="text-block ">
           <a href="{{ $options->where('key', 'footer')->first()->value }}" class="text text-[16px] text-white mb-3 flex justify-start items-center">
