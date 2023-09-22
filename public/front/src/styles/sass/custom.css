@@ -3,9 +3,6 @@
   overflow: hidden;
   height: 35px;
 }
-.nav-link a,
-.nav-link div {
-}
 .nav-link .div,
 .nav-link a {
   height: 100%;

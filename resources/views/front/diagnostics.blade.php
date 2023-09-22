@@ -21,7 +21,7 @@
     <div class="main w-full mx-auto px-3 pb-6">
       <div class="main-content mx-auto max-w-screen-xl py-7 sm:py-16">
         @foreach($diseases as $disease)
-        <div class="text-content">
+        <div class="text-content text-[16px]">
           {!! $disease->{'content_' . app()->getLocale()} !!}
         </div>
         @endforeach
@@ -34,9 +34,9 @@
               <div class="w-[40px] h-[40px] max-sm:w-[30px] max-sm:h-[30px] mr-3 truncate">
                 <img src="{{ asset($diagnostic->image) }}" class="w-full h-full" alt="">
               </div>
-              <div class="text text-[20px] max-sm:text-[16px] font-[600]">{{ $diagnostic->{'title_' . app()->getLocale()} }}</div>
+              <div class="text text-[16px] font-[600]">{{ $diagnostic->{'title_' . app()->getLocale()} }}</div>
             </div>
-            <div class="description mt-3 text-[20px] max-sm:text-[16px]">
+            <div class="description mt-3 text-[16px]">
               {!! $diagnostic->{'content_' . app()->getLocale()} !!}
             </div>
           </div>
