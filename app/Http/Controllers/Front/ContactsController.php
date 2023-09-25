@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CreateFile;
-use App\Models\Callback;
+use App\Models\Calback;
 use App\Models\Department;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -14,19 +15,6 @@ class ContactsController extends Controller
     {
         return view('front.contacts');
     }
-
-    public function saveCallback(CreateFile $request)
-    {
-        $data = $request->all();
-
-        $data['image'] = Callback::uploadImage($request);
-
-        if (Callback::create($data)) {
-           return back()->with('message', 'Your application has been successfully sent');
-        }
-         return back()->with('message', 'unable to sending');
-    }
-
 
     public function list()
     {
@@ -43,8 +31,27 @@ class ContactsController extends Controller
         ->orWhere('slug_ru', $slug)
         ->first();
 
-        return view('front.departments', compact(
-            'department'
-        ));
+        return view('front.departments', [
+            'department' => $department
+        ]);
     }
+
+                    /**
+     * @throws ValidationException
+     */
+    public function saveCallback(Request $request): RedirectResponse
+    {
+        $data =  $request->validate([
+            'fullname' => 'required',
+            'gmail' => 'required',
+            'phone_number' => 'required',
+            'comment' => 'required',
+            'image' =>  'required',
+        ]);
+       Calback::create($data);
+
+        return back()->with('message', 'unable to sending');
+
+    }
+
 }

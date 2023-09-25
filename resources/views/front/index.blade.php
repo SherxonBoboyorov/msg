@@ -141,22 +141,24 @@
         </div>
       </div>
 
+      @include('alert')
+
 
       <div class="form px-4 md:pt-16 max-md:pt-10 md:pb-20 max-md:pb-14  w-full mx-auto h-fit bg-cover bg-no-repeat" style="background-image: url('{{ asset('front/src/public/images/contact-back-img.png') }}')">
         <div class="title text-[40px] text-center font-[700] max-sm:text-[32px]">
           @lang('main.contact_us')
         </div>
 
-      @include('alert')
+      
 
         <div class="form-content mx-auto max-w-screen-md">
           <form action="{{ route('callback') }}" class="my-3" method="POST">
             @csrf
             <div class="input-content">
-              <input name="fio" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
-              <input name="email" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
-              <input name="phone" type="text" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')" required>
-              <textarea name="content" type="text" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"required></textarea>
+              <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
+              <input name="gmail" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
+              <input name="phone_number" type="text" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')" required>
+              <textarea name="comment" type="text" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"required></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full">
               <input name="image" type="file" class="hidden" onchange="takeFileName(event)" id="file">
@@ -165,10 +167,14 @@
               </label>
             </div>
             <div class="privacy-policy flex justify-between items-start">
-              <div class="text text-[15px] text-black mr-[60px]">
-                @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
-                <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
-              </div>
+              @foreach(\App\Models\Department::take(1)->get() as $department)
+              <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+                <div class="text text-[15px] text-black mr-[60px]">
+                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
+                  <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
+                </div>
+               </a>
+              @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
                   <input type="checkbox" id="privacy-yes"/>
@@ -182,12 +188,12 @@
               </div>
               <div class="radio-buttons [@media(max-width:576px)]:ml-[38px] mr-2 flex w-[120px] justify-between">
                 <div class="form-group">
-                  <input type="radio" id="yes" name="boolen" checked />
+                  <input type="radio" id="yes" name="bolean" checked/>
                   <label for="yes">@lang('main.yes')</label>
                 </div>
 
                 <div class="form-group">
-                  <input type="radio" id="female" name="boolen" />
+                  <input type="radio" id="female" name="bolean"/>
                   <label for="female">@lang('main.no')</label>
                 </div>
               </div>

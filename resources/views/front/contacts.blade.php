@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link href="{{ asset('front/src/styles/tailwindcss/output.css') }}" rel="stylesheet" />
   <link href="{{ asset('front/src/styles/sass/custom.css') }}" rel="stylesheet" />
-  <title>MSG | Contacts</title>
+  <title>MSG</title>
 </head>
 
 <body>
@@ -267,20 +267,20 @@
           <form action="{{ route('saveCallback') }}" class="my-3" method="POST">
             @csrf
             <div class="input-content">
-              <input required type="text" name="fio"
+              <input required type="text" name="fullname"
                 class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.name_and_surname')">
-              <input required type="email" name="email"
+              <input required type="email" name="gmail"
                 class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.email')">
-              <input required type="text" name="phone"
+              <input required type="text" name="phone_number"
                 class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.phone_number')">
-              <textarea required type="text" name="content" rows="4"
+              <textarea required type="text" name="comment" rows="4"
                 class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.your_message')"></textarea>
             </div>
-            <div class="upload mt-1 mb-5 w-full">
+            <div class="upload mt-1 mb-5 w-full"> 
               <input type="file" name="image" class="hidden" onchange="takeFileName(event)" id="file">
               <label id="fileLabel" for="file"
                 class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] ">
@@ -288,10 +288,14 @@
               </label>
             </div>
             <div class="privacy-policy flex justify-between items-start">
-              <div class="text text-[15px] text-black mr-[60px]">
-                @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
-                <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
-              </div>
+              @foreach(\App\Models\Department::take(1)->get() as $department)
+              <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+                <div class="text text-[15px] text-black mr-[60px]">
+                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
+                  <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
+                </div>
+               </a>
+              @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
                   <input type="checkbox" id="privacy-yes" />
