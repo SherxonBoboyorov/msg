@@ -25,7 +25,7 @@ return [
    'data_protection' => 'Data protection',
    'imprint' => 'Imprint',
    'all_rights_reserved' => '“Medical service in Germany” All rights reserved',
-   'about_company' => 'About company',
+   'about_company' => 'About the company',
    'read_more' => 'Read more',
    'more' => 'More',
    'contact_us' => 'Contact us',
@@ -44,5 +44,6 @@ return [
    'for_nurses' => 'For Nurses',
    'make_a_request' => 'Make a request',
    'hospital' => 'Company / hospital',
-   'about' => 'About'
+   'about' => 'About the company',
+   'what_kind_of_cooperation_offer' => 'What kind of cooperation would you like to offer?'
 ];

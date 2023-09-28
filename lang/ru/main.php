@@ -44,7 +44,8 @@ return [
    'for_nurses' => 'Для медсестер',
    'make_a_request' => 'Обратиться с просьбой',
    'hospital' => 'Компания / больница',
-   'about' => 'О нас'
+   'about' => 'О нас',
+   'what_kind_of_cooperation_offer' => 'Какое сотрудничество Вы хотели бы предложить?'
 
 
 ];

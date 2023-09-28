@@ -42,7 +42,7 @@
                   placeholder="@lang('main.email')">
                 <textarea required type="text" name="content" rows="4"
                   class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
-                  placeholder="What kind of cooperation would you like to offer?"></textarea>
+                  placeholder="@lang('main.what_kind_of_cooperation_offer')"></textarea>
               </div>
 
               <div class="privacy-policy flex justify-between items-start">
