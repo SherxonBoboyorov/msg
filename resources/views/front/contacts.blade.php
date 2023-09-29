@@ -349,7 +349,7 @@
         <div class="text-block opacity-[0.6] mr-5">
           @foreach (\App\Models\Department::orderBy('created_at', 'DESC')->get() as $department)
           <div class="text text-[16px] text-white mb-3">
-            <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+            <a href="{{ route('department-informations', $department->id }}">
             {{ $department->{'title_' . app()->getLocale()} }}
           </a>
         </div>
