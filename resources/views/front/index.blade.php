@@ -42,7 +42,7 @@
               </div>
 
               <a href="{{ route('about') }}" class="uppercase bg-cyellow px-5 py-3 rounded-lg text-[14px] max-sm:text-[15px] font-[500]">
-                @lang('main.read_more')
+              @lang('main.more')
               </a>
             </div>
           </div>
@@ -170,8 +170,9 @@
               @foreach(\App\Models\Department::take(1)->get() as $department)
               <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
                 <div class="text text-[15px] text-black mr-[60px]">
-                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
+                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.data_protection')</span> @lang('main.and_agree_following')
                   <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
+                 @lang('main.einverstanden')
                 </div>
                </a>
               @endforeach

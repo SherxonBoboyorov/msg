@@ -36,6 +36,7 @@ return [
    'privacy_policy' => 'политика конфиденциальности',
    'and_agree_following' => 'и соглашаемся со следующим',
    'collection_of_personal_policy' => 'Политика сбора персональных данных*',
+   'einverstanden' => '',
    'yes' => 'Да',
    'authorization_for_third_parties' => 'Разрешение для третьих лиц',
    'no' => 'Нет',
