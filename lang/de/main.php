@@ -47,5 +47,4 @@ return [
    'hospital' => 'Bedrijf / ziekenhuis',
    'about' => 'Über das Unternehmen',
    'what_kind_of_cooperation_offer' => 'Welche Art der Zusammenarbeit möchten Sie anbieten?'
-
 ];

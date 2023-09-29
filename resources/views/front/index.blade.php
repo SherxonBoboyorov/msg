@@ -149,8 +149,6 @@
           @lang('main.contact_us')
         </div>
 
-      
-
         <div class="form-content mx-auto max-w-screen-md">
           <form action="{{ route('callback') }}" class="my-3" method="POST">
             @csrf
@@ -205,8 +203,6 @@
             </div>
           </form>
         </div>
-
-
       </div>
     </div>
     <!-- main end -->

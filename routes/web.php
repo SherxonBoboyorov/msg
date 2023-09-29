@@ -75,7 +75,7 @@ Route::group(
     ], function(){
         Route::get('/', [IndexController::class, 'homepage'])->name('/');
         Route::get('department-informations/', [IndexController::class, 'list'])->name('department-informations');
-        Route::get('department-information/{slug}', [IndexController::class, 'show'])->name('department-informations');
+        Route::get('department-information/{id}', [IndexController::class, 'show'])->name('department-informations');
         Route::get('treatment', [TreatmentController::class, 'treatment'])->name('treatment');
         Route::get('diagnostics', [DiagnosticsController::class, 'diagnostics'])->name('diagnostics');
         Route::get('information', [InformationController::class, 'information'])->name('information');
