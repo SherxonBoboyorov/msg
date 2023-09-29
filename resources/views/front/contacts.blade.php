@@ -237,8 +237,8 @@
           <div class="text-content my-3">
             <div class="key text-cred text-[14px] font-[400]">@lang('main.phone_number')</div>
             <a href="tel:{{ $options->where('key', 'phone')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone')->first()->value }}</a><br>
-            <a href="tel:{{ $options->where('key', 'phone1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone1')->first()->value }}</a><br>
-            <a href="tel:{{ $options->where('key', 'phone2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone2')->first()->value }}</a>
+            {{-- <a href="tel:{{ $options->where('key', 'phone1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone1')->first()->value }}</a><br>
+            <a href="tel:{{ $options->where('key', 'phone2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'phone2')->first()->value }}</a> --}}
           </div>
           <div class="text-content my-3">
             <div class="key text-cred text-[14px] font-[400]">@lang('main.address')</div>
@@ -255,8 +255,8 @@
           <div class="text-content my-3">
             <div class="key text-cred text-[14px] font-[400]">@lang('main.email')</div>
             <a href="mailto:{{ $options->where('key', 'email')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email')->first()->value }}</a><br>
-            <a href="mailto:{{ $options->where('key', 'email1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email1')->first()->value }}</a><br>
-            <a href="mailto:{{ $options->where('key', 'email2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email2')->first()->value }}</a>
+            {{-- <a href="mailto:{{ $options->where('key', 'email1')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email1')->first()->value }}</a><br>
+            <a href="mailto:{{ $options->where('key', 'email2')->first()->value }}" class="value text-[16px] font-[600]">{{ $options->where('key', 'email2')->first()->value }}</a> --}}
           </div>
         </div>
         <div class="form-content max-w-[600px] overflow-hidden w-[60%] max-sm:w-full">
@@ -289,12 +289,12 @@
             </div>
             <div class="privacy-policy flex justify-between items-start">
               @foreach(\App\Models\Department::take(1)->get() as $department)
-              <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+              {{-- <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}"> --}}
                 <div class="text text-[15px] text-black mr-[60px]">
-                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.privacy_policy')</span> @lang('main.and_agree_following')
-                  <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
+                  @lang('main.i_have_read') <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 1]) }}">@lang('main.privacy_policy')</a></span> @lang('main.and_agree_following')
+                  <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 4]) }}">@lang('main.collection_of_personal_policy')</a> </span>
                 </div>
-               </a>
+               {{-- </a> --}}
               @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">

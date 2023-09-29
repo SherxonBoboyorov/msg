@@ -33,7 +33,7 @@ return [
    'name_and_surname' => 'Name and surname',
    'your_message' => 'Your message',
    'i_have_read' => 'I have read the',
-   'privacy_policy' => 'Privacy Policy',
+   'privacy_policy' => 'Data protection',
    'and_agree_following' => 'and agree to the following',
    'collection_of_personal_policy' => 'Collection of personal data- personal data collection policy',
    'einverstanden' => '',

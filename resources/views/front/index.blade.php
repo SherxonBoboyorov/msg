@@ -168,13 +168,13 @@
             </div>
             <div class="privacy-policy flex justify-between items-start">
               @foreach(\App\Models\Department::take(1)->get() as $department)
-              <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}">
+              {{-- <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}"> --}}
                 <div class="text text-[15px] text-black mr-[60px]">
-                  @lang('main.i_have_read') <span class="text-cred font-[700]">@lang('main.data_protection')</span> @lang('main.and_agree_following')
-                  <span class="text-cred font-[700]">@lang('main.collection_of_personal_policy') </span>
+                  @lang('main.i_have_read') <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 1]) }}">@lang('main.privacy_policy')</a></span> @lang('main.and_agree_following')
+                  <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 4]) }}">@lang('main.collection_of_personal_policy')</a> </span>
                  @lang('main.einverstanden')
                 </div>
-               </a>
+               {{-- </a> --}}
               @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">

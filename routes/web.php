@@ -88,7 +88,7 @@ Route::group(
         Route::get('faq', [FaqsController::class, 'faq'])->name('faq');
         Route::get('contacts', [ContactsController::class, 'contacts'])->name('contacts');
         Route::get('department-informations/', [ContactsController::class, 'list'])->name('department-informations');
-        Route::get('department-information/{slug}', [ContactsController::class, 'show'])->name('department-informations');
+        Route::get('department-information/{id}', [ContactsController::class, 'show'])->name('department-informations');
         Route::post('callback', [IndexController::class, 'callback'])->name('callback');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
