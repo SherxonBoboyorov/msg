@@ -46,5 +46,7 @@ return [
    'make_a_request' => 'Make a request',
    'hospital' => 'Company / hospital',
    'about' => 'About the company',
-   'what_kind_of_cooperation_offer' => 'What kind of cooperation would you like to offer?'
+   'what_kind_of_cooperation_offer' => 'What kind of cooperation would you like to offer?',
+   'request' => 'Our contact details'
+
 ];
