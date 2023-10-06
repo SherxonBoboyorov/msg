@@ -62,6 +62,7 @@ class IndexController extends Controller
             $image = '/upload/files/' . date('d-m-Y') . '/' . $file->getClientOriginalName();
         }
 
+
         $input = $request->all();
 
 
