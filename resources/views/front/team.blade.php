@@ -95,7 +95,6 @@
                 </div>
                 </a>
               </div>
-              <!-- foreach end -->
 
             </div>
           </div>

@@ -35,6 +35,7 @@ use App\Http\Controllers\Front\OfferController;
 use App\Http\Controllers\Front\OurTeamController;
 use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\TreatmentController;
+use Illuminate\Support\Facades\Mail;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -92,24 +93,12 @@ Route::group(
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
         Route::get('about', [AboutController::class, 'about'])->name('about');
-        
-        // Route::get('contact-us', [IndexController::class, 'homepage']);
 
-        // Route::post('contact-us', [IndexController::class, 'storeContactForm'])->name('contact.us.store');
         Route::post('/contact-form', [IndexController::class, 'storeContactForm'])->name('contact-form.store');
-
-        // Route::post('/callback', function () {
-        //     $data = request(['fullname', 'gmail', 'phone_number', 'comment', 'image']);
-
-        //     \Illuminate\Support\Facades\Mail::to('sherxonbabayar@gmail.com')->send(new \App\Mail\CallbackMe($data));
-
-        //     return redirect('/callback') 
-        //          ->with('flash', "Send Successfully!");
-
-        // });
-
-
  });
+
+
+
 
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

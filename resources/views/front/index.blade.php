@@ -150,8 +150,7 @@
         </div>
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form  method="POST" action="{{ route('contact-form.store') }}" class="my-3">
-            {{-- @csrf --}}
+          <form method="POST" action="{{ route('contact-form.store') }}" class="my-3">
             {{ csrf_field() }}
             <div class="input-content">
               <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
@@ -187,15 +186,15 @@
                 @lang('main.authorization_for_third_parties')<span class="text-cred">*</span>
               </div>
               <div class="radio-buttons [@media(max-width:576px)]:ml-[38px] mr-2 flex w-[120px] justify-between">
-                {{-- <div class="form-group">
+                <div class="form-group">
                   <input type="radio" id="yes" name="bolean" checked/>
                   <label for="yes">@lang('main.yes')</label>
-                </div> --}}
+                </div>
 
-                {{-- <div class="form-group">
+                <div class="form-group">
                   <input type="radio" id="female" name="bolean"/>
                   <label for="female">@lang('main.no')</label>
-                </div> --}}
+                </div>
               </div>
             </div>
             <div class="button-content mt-7 w-full flex justify-center items-center">

@@ -7,14 +7,14 @@
     <title>Contact us</title>
 </head>
 <body>
-    <p><strong>Name:</strong>{{ $fullname}}</p>
-    <p><strong>Email:</strong>{{ $gmail }}</p>
-    <p><strong>Phone Number:</strong>{{ $phone_number }}</p>
-    <p><strong>Image:</strong>{{ $image }}</p>
-    <br>
+    <p><strong>Name: </strong> {{ $fullname}}</p>
+    <p><strong>Email: </strong> {{ $gmail }}</p>
+    <p><strong>Phone Number: </strong> {{ $phone_number }}</p>
+    <p><a href="{{ $image }}" download="">File: </a>{{ $image }}</p> 
+     <br>
 
-    <h2>Comment</h2>
-    {{ $comment }}
+    <h2>Comment: </h2>
+     {{ $comment }}
 
 </body>
 </html>
