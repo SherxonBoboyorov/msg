@@ -11,7 +11,7 @@ class CallbackMe extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
+    protected $data;
 
     /**
      * Create a new message instance.
@@ -32,9 +32,13 @@ class CallbackMe extends Mailable
 
     public function build()
     {
-        return $this->view('emailTemplate', [
-            'data' => $this->data
-        ]);
+        $fullname = $this->data['fullname'];
+
+        return $this->subject('Contact us')
+                    ->view('emailTemplate', compact('fullname'))
+                    ->attach($this->data['file']->getRealPath(), [
+                        'as' => $this->data['file']->getClientOriginalName()
+                ]);
     }
 
 }

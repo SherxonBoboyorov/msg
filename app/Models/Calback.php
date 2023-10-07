@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\CallbackMe;
+use Illuminate\Support\Facades\File;
 
 class Calback extends Model
 {
@@ -18,10 +19,11 @@ class Calback extends Model
         'gmail',
         'phone_number',
         'comment',
-        'image',
-        'converted'
+        'file'
     ];
 
+
+    
     //  /**
 
     //  * Write code on Method

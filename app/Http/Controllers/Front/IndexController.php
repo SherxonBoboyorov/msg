@@ -49,19 +49,8 @@ class IndexController extends Controller
             'gmail' => 'required',
             'phone_number' => 'required',
             'comment' => 'required',
-            'image' => 'required',
+            'file' => 'required',
         ]);
-
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            if (!File::exists(public_path() . '/upload/files/' . date('d-m-Y')))
-            {
-                File::makeDirectory(public_path() . '/upload/files/' . date('d-m-Y'), $mode = 0777, true, true);
-            }
-            $file->move(public_path() . '/upload/files/' . date('d-m-Y'), $file->getClientOriginalName());
-            $image = '/upload/files/' . date('d-m-Y') . '/' . $file->getClientOriginalName();
-        }
-
 
         $input = $request->all();
 
@@ -73,7 +62,7 @@ class IndexController extends Controller
             'gmail' => $input['gmail'],
             'phone_number' => $input['phone_number'],
             'comment' => $input['comment'],
-            'image' => $input['image']
+            'file' => $input['file']
         ), function($message) use ($request){
             $message->from($request->gmail);
             $message->to('sherxonbabayar@gmail.com', 'Contact us')->subject($request->get('fullname'));

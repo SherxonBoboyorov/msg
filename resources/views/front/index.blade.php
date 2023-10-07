@@ -159,7 +159,7 @@
               <textarea name="comment" type="text" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"required></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full">
-              <input name="image" type="file" class="hidden" onchange="takeFileName(event)" id="file">
+              <input name="file" type="file" class="hidden" onchange="takeFileName(event)" id="file">
               <label id="fileLabel" for="file" class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase" required>
                 @lang('main.ipload_the_medical_reports')
               </label>

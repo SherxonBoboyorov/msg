@@ -24,11 +24,11 @@ class CreateCallback extends FormRequest
     public function rules(): array
     {
         return [
+            'file' => 'required',
             'fullname' => 'required|max:255',
             'gmail' => 'required|max:255',
             'phone_number' => 'required|max:255',
             'comment' => 'required',
-            'image' => 'required|file|mimes:csv,txt,xlx,xls,pdf,docx,zip,eps,ffx,jpg,png,webp',
         ];
     }
 }
