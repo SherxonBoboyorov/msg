@@ -93,8 +93,9 @@ Route::group(
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
         Route::get('about', [AboutController::class, 'about'])->name('about');
+        Route::post('email/send', [IndexController::class, 'send'])->name('email/send');
 
-        Route::post('/contact-form', [IndexController::class, 'storeContactForm'])->name('contact-form.store');
+        // Route::post('/contact-form', [IndexController::class, 'storeContactForm'])->name('contact-form.store');
  });
 
 

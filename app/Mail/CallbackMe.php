@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -36,7 +37,7 @@ class CallbackMe extends Mailable
 
         return $this->subject('Contact us')
                     ->view('emailTemplate', compact('fullname'))
-                    ->attach($this->data['file']->getRealPath(), [
+                    ->attach($this->data['file']->getRealPath(),[
                         'as' => $this->data['file']->getClientOriginalName()
                 ]);
     }

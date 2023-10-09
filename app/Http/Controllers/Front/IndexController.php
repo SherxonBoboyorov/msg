@@ -42,34 +42,52 @@ class IndexController extends Controller
     }
 
 
-    public function storeContactForm(Request $request)
+    public function send(Request $request) 
     {
-        $request->validate([
-            'fullname' => 'required',
-            'gmail' => 'required',
-            'phone_number' => 'required',
-            'comment' => 'required',
-            'file' => 'required',
-        ]);
+        $data = [
+            'fullname' => $request->fullname,
+            'gmail' => $request->gmail,
+            'phone_number' => $request->phone_number,
+            'comment' => $request->comment,
+            'file' => $request->file('file')
+        ];
 
-        $input = $request->all();
+        $to = 'sherxonbabayar@gmail.com';
 
-
-        Calback::create($input);
-
-        Mail::send('emailTemplate', array(
-            'fullname' => $input['fullname'],
-            'gmail' => $input['gmail'],
-            'phone_number' => $input['phone_number'],
-            'comment' => $input['comment'],
-            'file' => $input['file']
-        ), function($message) use ($request){
-            $message->from($request->gmail);
-            $message->to('sherxonbabayar@gmail.com', 'Contact us')->subject($request->get('fullname'));
-           
-        });
+        Mail::to($to)->send(new \App\Mail\CallbackMe($data));
 
         return back()->with('message', 'unable to sending');
     }
+
+
+    // public function storeContactForm(Request $request)
+    // {
+    //     $request->validate([
+    //         'fullname' => 'required',
+    //         'gmail' => 'required',
+    //         'phone_number' => 'required',
+    //         'comment' => 'required',
+    //         'file' => 'required',
+    //     ]);
+
+    //     $input = $request->all();
+
+
+    //     Calback::create($input);
+
+    //     Mail::send('emailTemplate', array(
+    //         'fullname' => $input['fullname'],
+    //         'gmail' => $input['gmail'],
+    //         'phone_number' => $input['phone_number'],
+    //         'comment' => $input['comment'],
+    //         'file' => $input['file']
+    //     ), function($message) use ($request){
+    //         $message->from($request->gmail);
+    //         $message->to('sherxonbabayar@gmail.com', 'Contact us')->subject($request->get('fullname'));
+           
+    //     });
+
+    //     return back()->with('message', 'unable to sending');
+    // }
 
 }

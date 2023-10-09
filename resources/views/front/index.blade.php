@@ -150,8 +150,9 @@
         </div>
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form method="POST" action="{{ route('contact-form.store') }}" class="my-3">
-            {{ csrf_field() }}
+          <form method="POST" action="{{ route('email/send') }}" class="my-3">
+            @csrf
+            {{-- {{ csrf_field() }} --}}
             <div class="input-content">
               <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
               <input name="gmail" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
