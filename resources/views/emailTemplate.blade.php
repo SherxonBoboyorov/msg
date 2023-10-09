@@ -7,16 +7,14 @@
     <title>Contact us</title>
 </head>
 <body>
-    <p style="margin-left:10%;">Fullname:  - <b>{{ $data['fullname'] }} </b></p>
-    <p style="margin-left:10%;">Email:  - <b>{{ $data['gmail'] }} </b></p>
-    <p style="margin-left:10%;">Phone number:  - <b>{{ $data['phone_number'] }} </b></p>
+    <p style="margin-left:10%;">Fullname:  - <b>{{ $fullname }} </b></p>
+    <p style="margin-left:10%;">Email:  - <b>{{ $gmail }} </b></p>
+    <p style="margin-left:10%;">Phone number:  - <b>{{ $phone_number }} </b></p>
 
-   <br>
-    <h2>
-       <p style="margin-left:10%;">Comment - <b>{{ $data['email'] }}  </b></p>
-    </h2>
+    <br>
+    <p style="margin-left:10%;">Comment: - <b>{{ $comment }}  </b></p>
     
-    <p>It would be appriciative, if you gone through this feedback.</p>
+
 
 </body>
 </html>

@@ -150,9 +150,8 @@
         </div>
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form method="POST" action="{{ route('email/send') }}" class="my-3">
-            @csrf
-            {{-- {{ csrf_field() }} --}}
+          <form method="POST" action="{{ route('contact-form.store') }}" class="my-3">
+            {{ csrf_field() }}
             <div class="input-content">
               <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
               <input name="gmail" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
@@ -167,13 +166,11 @@
             </div>
             <div class="privacy-policy flex justify-between items-start">
               @foreach(\App\Models\Department::take(1)->get() as $department)
-              {{-- <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}"> --}}
                 <div class="text text-[15px] text-black mr-[60px]">
                   @lang('main.i_have_read') <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 1]) }}">@lang('main.privacy_policy')</a></span> @lang('main.and_agree_following')
                   <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 4]) }}">@lang('main.collection_of_personal_policy')</a> </span>
                  @lang('main.einverstanden')
                 </div>
-               {{-- </a> --}}
               @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
