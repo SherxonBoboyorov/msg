@@ -35,6 +35,7 @@ use App\Http\Controllers\Front\OfferController;
 use App\Http\Controllers\Front\OurTeamController;
 use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\TreatmentController;
+use App\Mail\CallbackMe;
 use Illuminate\Support\Facades\Mail;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
@@ -95,9 +96,9 @@ Route::group(
         Route::get('about', [AboutController::class, 'about'])->name('about');
 
         Route::post('/contact-form', [IndexController::class, 'storeContactForm'])->name('contact-form.store');
- });
 
 
+    });
 
 
 
