@@ -256,7 +256,18 @@
             @lang('main.make_a_request')
           </div>
 
-          <form action="{{ route('saveCallback') }}" class="my-3" method="POST">
+          @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li style="color: red">{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div>
+          @endif
+
+          <form method="POST" action="{{ route('contact-form.store') }}" enctype="multipart/form-data" class="my-3">
+            {{ csrf_field() }}
             @csrf
             <div class="input-content">
               <input required type="text" name="fullname"
@@ -265,7 +276,7 @@
               <input required type="email" name="gmail"
                 class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.email')">
-              <input required type="text" name="phone_number"
+              <input required type="number" name="phone_number"
                 class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                 placeholder="@lang('main.phone_number')">
               <textarea required type="text" name="comment" rows="4"
@@ -273,7 +284,7 @@
                 placeholder="@lang('main.your_message')"></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full"> 
-              <input type="file" name="image" class="hidden" onchange="takeFileName(event)" id="file">
+              <input type="file" name="file" class="hidden" onchange="takeFileName(event)" id="file">
               <label id="fileLabel" for="file"
                 class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] ">
                 @lang('main.ipload_the_medical_reports')
@@ -281,12 +292,10 @@
             </div>
             <div class="privacy-policy flex justify-between items-start">
               @foreach(\App\Models\Department::take(1)->get() as $department)
-              {{-- <a href="{{ route('department-informations', $department->{'slug_' . app()->getLocale()}) }}"> --}}
                 <div class="text text-[15px] text-black mr-[60px]">
                   @lang('main.i_have_read') <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 1]) }}">@lang('main.privacy_policy')</a></span> @lang('main.and_agree_following')
                   <span class="text-cred font-[700]"><a href="{{ route('department-informations', ['id' => 4]) }}">@lang('main.collection_of_personal_policy')</a> </span>
                 </div>
-               {{-- </a> --}}
               @endforeach
               <div class="radio-buttons  [@media(max-width:576px)]:ml-[38px] flex w-[35px] justify-between">
                 <div class="form-group ">
