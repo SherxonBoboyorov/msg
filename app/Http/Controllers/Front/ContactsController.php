@@ -24,12 +24,9 @@ class ContactsController extends Controller
         ));
     }
 
-    public function show($slug)
+    public function show($id)
     {
-        $department = Department::where('slug_de', $slug)
-        ->orWhere('slug_en', $slug)
-        ->orWhere('slug_ru', $slug)
-        ->first();
+        $department = Department::find($id);
 
         return view('front.departments', [
             'department' => $department

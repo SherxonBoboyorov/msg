@@ -91,6 +91,8 @@ Route::group(
         Route::get('department-informations/', [ContactsController::class, 'list'])->name('department-informations');
         Route::get('department-information/{id}', [ContactsController::class, 'show'])->name('department-informations');
         Route::post('youSave', [OfferController::class, 'youSave'])->name('youSave');
+        Route::get('department-informations/', [OfferController::class, 'list'])->name('department-informations');
+        Route::get('department-information/{id}', [OfferController::class, 'show'])->name('department-informations');
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
         Route::get('about', [AboutController::class, 'about'])->name('about');
 
