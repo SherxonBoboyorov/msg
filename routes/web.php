@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\ContactFeedbackController;
 use App\Http\Controllers\Front\ContactsController;
 use App\Http\Controllers\Front\DiagnosticsController;
 use App\Http\Controllers\Front\DucumentsController;
@@ -35,8 +36,6 @@ use App\Http\Controllers\Front\OfferController;
 use App\Http\Controllers\Front\OurTeamController;
 use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\TreatmentController;
-use App\Mail\CallbackMe;
-use Illuminate\Support\Facades\Mail;
 use UniSharp\Laravel\LaravelFilemanager\Lfm;
 
 
@@ -95,7 +94,7 @@ Route::group(
         Route::post('saveCallback', [ContactsController::class, 'saveCallback'])->name('saveCallback');
         Route::get('about', [AboutController::class, 'about'])->name('about');
 
-        Route::post('/contact-form', [IndexController::class, 'storeContactForm'])->name('contact-form.store');
+        Route::post('/contact-form', ContactFeedbackController::class)->name('contact-form.store');
 
 
     });

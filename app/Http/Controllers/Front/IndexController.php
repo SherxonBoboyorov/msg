@@ -43,18 +43,24 @@ class IndexController extends Controller
 
 
 
+
+
+
+
     public function storeContactForm(Request $request)
     {
-        Mail::send('emailTemplate', array(
-            'fullname' => $request['fullname'],
-            'gmail' => $request['gmail'],
-            'phone_number' => $request['phone_number'],
-            'comment' => $request['comment'],
-            'file' => $request->file('file')
-        ), function($message) use ($request){
-            $message->from($request->gmail);
-            $message->to('sherxonbabayar@gmail.com', 'Contact us')->subject($request->get('fullname'));           
-        });
+        Calback::create($request->all());
+
+        // Mail::send('emailTemplate', array(
+        //     'fullname' => $request['fullname'],
+        //     'gmail' => $request['gmail'],
+        //     'phone_number' => $request['phone_number'],
+        //     'comment' => $request['comment'],
+        //     'file' => $request->file('file')
+        // ), function($message) use ($request){
+        //     $message->from($request->gmail);
+        //     $message->to('sherxonbabayar@gmail.com', 'Contact us')->subject($request->get('fullname'));           
+        // });
 
         return back()->with('message', 'unable to sending');
     }

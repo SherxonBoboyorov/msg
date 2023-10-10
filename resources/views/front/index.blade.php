@@ -150,12 +150,23 @@
         </div>
 
         <div class="form-content mx-auto max-w-screen-md">
-          <form method="POST" action="{{ route('contact-form.store') }}" class="my-3">
+
+          @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li style="color: red">{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div>
+          @endif
+
+          <form method="POST" action="{{ route('contact-form.store') }}" enctype="multipart/form-data" class="my-3">
             {{ csrf_field() }}
             <div class="input-content">
               <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
               <input name="gmail" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
-              <input name="phone_number" type="text" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')" required>
+              <input name="phone_number" type="number" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.phone_number')" required>
               <textarea name="comment" type="text" rows="4" class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.your_message')"required></textarea>
             </div>
             <div class="upload mt-1 mb-5 w-full">
