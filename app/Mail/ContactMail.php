@@ -57,8 +57,21 @@ class ContactMail extends Mailable
      */
     public function attachments()
     {
-        return [
-            Attachment::fromStorageDisk('public', $this->data->file)
-        ];
+
+        // $file = Attachment::fromStorageDisk('public', $this->data->file);
+
+        // if(isset($file) && $file !== null) {
+        //     return [
+        //         Attachment::fromStorageDisk('public', $this->data->file)
+        //     ];
+        // }
+        
+        $file = $this->data->file ?? null;
+
+        if(isset($file) && $file){
+            return [
+                Attachment::fromStorageDisk('public', $this->data->file)
+            ];
+        }
     }
 }

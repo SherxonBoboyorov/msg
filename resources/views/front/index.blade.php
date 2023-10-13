@@ -162,7 +162,8 @@
           @endif
 
           <form method="POST" action="{{ route('contact-form.store') }}" enctype="multipart/form-data" class="my-3">
-            {{ csrf_field() }}
+            {{-- {{ csrf_field() }} --}}
+            @csrf
             <div class="input-content">
               <input name="fullname" type="text" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.name_and_surname')" required>
               <input name="gmail" type="email" class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white" placeholder="@lang('main.email')" required>
@@ -171,7 +172,7 @@
             </div>
             <div class="upload mt-1 mb-5 w-full">
               <input name="file" type="file" class="hidden" onchange="takeFileName(event)" id="file">
-              <label id="fileLabel" for="file" class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase" required>
+              <label id="fileLabel" for="file" class="cursor-pointer rounded-lg shadow-[0_2px_14px_0_rgba(0,0,0,0.10)] block bg-white truncate py-3 px-5 text-[14px] font-[600] uppercase">
                 @lang('main.ipload_the_medical_reports')
               </label>
             </div>

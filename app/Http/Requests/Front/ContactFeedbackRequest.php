@@ -27,8 +27,8 @@ class ContactFeedbackRequest extends FormRequest
             'fullname' => 'required|max:100',
             'gmail' => 'required|email:rfc,dns',
             'phone_number' => 'required|numeric',
-            'comment' => 'required',
-            'file' => 'required|file|mimes:jpg,jpeg,png,webp,pdf,doc,docx,xls,xlsx'
+            'comment' => 'nullable',
+            'file' => 'nullable|file|mimes:jpg,jpeg,png,webp,pdf,doc,docx,xls,xlsx'
         ];
     }
 }

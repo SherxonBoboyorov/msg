@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('calbacks', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
+
             $table->string('fullname');
             $table->string('gmail');
-            $table->string('phone_number');
+            $table->integer('phone_number');
             $table->text('comment')->nullable();
-            $table->string('image')->nullable();
-            $table->enum('converted', ['yes', 'no']);
+            $table->string('file')->nullable();
+
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calbacks');
+        Schema::dropIfExists('feedback');
     }
 };
