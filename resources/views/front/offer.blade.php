@@ -25,7 +25,19 @@
       <div class="main-content mx-auto max-w-screen-xl  py-7 sm:py-16">
         <div class="form w-full mx-auto h-fit">
           <div class="form-content mx-auto w-full">
-            <form action="{{ route('youSave') }}" class="my-3" method="POST">
+
+            
+          @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li style="color: red">{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div>
+          @endif
+
+            <form method="POST" action="{{ route('offer-form.store') }}" class="my-3">
               @csrf
               <div class="input-content">
                 <input required type="text" name="names"
@@ -34,7 +46,7 @@
                 <input required type="text" name="hospital_names"
                   class="w-full border border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                   placeholder="@lang('main.hospital')">
-                <input required type="text" name="phone"
+                <input required type="number" name="phone"
                   class="w-full border contact-input-number border-[#D6D6D6] text-black placeholder:text-black rounded-lg py-3 px-5 my-2.5 text-[18px] outline-none bg-white"
                   placeholder="@lang('main.phone_number')">
                 <input required type="email" name="email"

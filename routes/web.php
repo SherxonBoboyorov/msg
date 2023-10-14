@@ -33,6 +33,7 @@ use App\Http\Controllers\Front\InformationController;
 use App\Http\Controllers\Front\MedicalController;
 use App\Http\Controllers\Front\NursesController;
 use App\Http\Controllers\Front\OfferController;
+use App\Http\Controllers\Front\OfferFeedbackController;
 use App\Http\Controllers\Front\OurTeamController;
 use App\Http\Controllers\Front\PartnersController;
 use App\Http\Controllers\Front\TreatmentController;
@@ -97,6 +98,8 @@ Route::group(
         Route::get('about', [AboutController::class, 'about'])->name('about');
 
         Route::post('/contact-form', ContactFeedbackController::class)->name('contact-form.store');
+        Route::post('/offer-form', OfferFeedbackController::class)->name('offer-form.store');
+
 
 
     });
